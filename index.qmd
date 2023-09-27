@@ -5,4 +5,4 @@ listing:
   template: custom_listing.ejs
 ---
 
-Here be lions.
+Here be lions

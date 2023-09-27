@@ -1,0 +1,16 @@
+/* css styles */
+.nav-footer-center {
+    min-height: 1em;
+}
+
+@media (max-width: 767.98px) {
+    .nav-footer-center {
+    margin-top: 0;
+    }
+}
+
+.slide-deck {
+	border: 3px solid #dee2e6;
+	width: 100%;
+	height: 475px;
+}

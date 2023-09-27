@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Academic skills",
+    "section": "",
+    "text": "Here be lions\n\n\n\n\n\n\n\nWeek 0\n\n\nWelcome\n\n\n\n\nWeek 1\n\n\nWhat is science\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/week_00/slides/index.html#welcome",
+    "href": "posts/week_00/slides/index.html#welcome",
+    "title": "Week 0",
+    "section": "Welcome",
+    "text": "Welcome\n\nsomething"
+  },
+  {
+    "objectID": "posts/week_01/slides/index.html#welcome",
+    "href": "posts/week_01/slides/index.html#welcome",
+    "title": "Week 1",
+    "section": "Welcome",
+    "text": "Welcome\n\nsomething"
+  }
+]
