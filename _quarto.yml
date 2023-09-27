@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+  resources: static/.
+
+
+website:
+  title: "Academic skills @IUDD"
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+    right: 
+      - icon: github
+        href: https://github.com/Bauhaus-InfAR/bauhaus_research_skills_23
+  page-footer: 
+    center: "&copy; 2023 Milan Valášek"
+    background: primary
+  repo-url: https://github.com/Bauhaus-InfAR/bauhaus_research_skills_23
+  repo-actions: [edit, issue]
+  favicon: favicon.ico
+
+format:
+  html:
+    theme:
+      light: [flatly, theme-light.scss]
+      dark: [flatly, theme-dark.scss]
+    css: styles.css
+    toc: true
+
+
+execute: 
+  freeze: auto
+
+
+
+

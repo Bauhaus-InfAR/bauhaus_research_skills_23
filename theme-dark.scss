@@ -1,0 +1,23 @@
+/*-- scss:defaults --*/
+// Base document colors
+$body-color: #b7b7b7;
+$body-bg: #2b2a33;
+// $light: #201f26;
+$primary: #201f26;
+// $link-color: #75AADB;
+
+// Code blocks
+$code-block-bg-alpha: -.8;
+
+/*-- scss:rules --*/
+body:not(.floating) .nav-footer {
+    border-top: none;
+  }
+
+h2, .h2 {
+  border-bottom: 1px solid #fff3;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  color: #fff
+}

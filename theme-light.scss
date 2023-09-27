@@ -1,0 +1,15 @@
+/*-- scss:defaults --*/
+// Base document colors
+$body-bg: #fafafa;
+$body-color: #111;
+// $light: #ccc;
+
+
+/*-- scss:rules --*/
+h2, .h2 {
+    border-bottom: 1px solid #cbcfd4;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    color: $primary;
+}

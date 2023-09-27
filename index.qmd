@@ -1,0 +1,8 @@
+---
+title: "Academic skills"
+listing:
+  contents: posts/*/index.qmd
+  template: custom_listing.ejs
+---
+
+Here be lions.
