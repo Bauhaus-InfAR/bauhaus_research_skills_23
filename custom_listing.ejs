@@ -1,7 +1,0 @@
-<ul>
-    <% for (const item of items) { %>
-      <h2><%= item.title %></h2>
-      <p><%= item.description %></p>
-      <iframe class="slide-deck" src="<%- item.path.replaceAll('\\', '/').replace('index.qmd', 'slides') %>"></iframe>
-    <% } %>
-</ul>

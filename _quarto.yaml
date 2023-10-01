@@ -1,0 +1,12 @@
+project:
+  type: hugo
+  preview:
+    port: 1313
+      
+format: 
+  hugo-md:
+    code-fold: false
+  
+execute: 
+  warning: false
+  echo: false

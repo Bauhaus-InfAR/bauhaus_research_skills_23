@@ -1,0 +1,57 @@
+{{ define "custom_head" }}
+{{ partial "reveal_head" . }}
+{{ end }}
+
+{{ define "body" }}
+<body class="quarto-light">
+<img src="/img/buw_logo.svg" class="slide-logo">
+<div class="reveal">
+<div class="slides">
+
+  
+<section id="title-slide" class="center">
+  <div id="title-container">
+  <p class="week">{{ .Params.subtitle }}</p>
+  <h1 class="title">{{ .Title }}</h1>
+  <p class="subtitle">IUDD Research Skills</p>
+  <p class="date">{{ .Date.Format "2 January 2006" }}</p>
+  <p class="author">{{ with .Page.Params.Author }}{{ . }}{{ else }}{{print "Dr " .Site.Author.name }}{{ end }}</p>
+  <p class="institute">Bauhaus-University Weimar</p>
+  </div>
+  </section>
+
+{{ $paragraphs := split .Content "<h2 " }}
+{{ range $index, $p := $paragraphs }}
+{{ if eq $index 0}}
+{{ else }}
+{{ $heading := index ( index (findRESubmatch `.*?h2>` $p) 0 ) 0 }}
+{{ $headingText := replaceRE `.*?>(.*?)<.*` "$1" $heading }}
+{{ $isAnimated := in $heading "auto-animate" }}
+{{ $animation := index ( index ( findRESubmatch `animate-easing="(.*?)"` $heading ) 0 ) 0 }}
+{{ $animation = replaceRE `.*?"(.*)"` "$1" $animation }}
+{{ $headingClass := ""}}
+{{ if findRE `class=` $heading }}
+{{ $headingClass = replaceRE `.*class="(.*?)".*` "$1" $heading}}
+{{ end }}
+{{ $dataId := ""}}
+{{ if findRE `data-id=` $heading }}
+{{ $dataId = replaceRE `.*data-id="(.*?)".*` "$1" $heading}}
+{{ end }}
+{{ if $isAnimated }}
+<section id="{{ $headingText | urlize }}" class="slide level2" data-auto-animate="true" data-auto-animate-easing="{{ $animation }}">
+{{ else }}
+<section id="{{ $headingText | urlize }}" class="slide level2">
+{{ end }}
+  <h2 class="{{ $headingClass }}" data-id="{{ $dataId }}">{{ $headingText }}</h2>
+  {{ print (replaceRE `.*/h2>` "" $p) | safeHTML }}
+</section> 
+{{ end}}
+{{ end }}
+</div>
+</div>
+</body>
+{{ end }}
+
+{{ define "foot" }}
+{{ partial "reveal_foot" . }}
+{{ end }}

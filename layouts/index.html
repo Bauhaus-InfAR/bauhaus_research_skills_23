@@ -1,0 +1,36 @@
+{{ define "body" }}
+<body>
+    {{ block "header" . }}
+    {{ partial "header" . }}
+    {{ end }}
+
+    <main>
+        <div class="container">
+            <section id="intro">
+                {{ .Content }}
+            </section>
+            <section id="week_list-section">
+                {{ range sort .Pages "File.Path" }}
+                <details><summary><h2><span class="week-number">Week {{ replaceRE ".*?0?(\\d+).*" "$1" .File.Dir }}</span>{{ .Title }}</h2></summary>
+                <p>{{ .Content }}</p>
+                <div class="slide-iframe-container">
+                    <iframe class="slides" src="{{ .Permalink }}/slides"></iframe>
+                    <a href="{{ .Permalink }}/slides">Open in a new tab</a>
+                </div>
+                </details>
+                {{ end }}
+            </section>
+        </div>
+    </main>
+</div>
+
+    {{ partial "footer" . }}
+    {{ block "footer_js" . }}
+    {{ end }}
+    {{ with .Resources.Get .Params.footer_js }}<script src="{{ . }}" type="text/javascript"></script>{{ end }}
+    {{ block "footer_css" . }}
+    {{ end }}
+    {{ with .Resources.Get .Params.footer_css }}
+    <link rel="stylesheet" href="{{ resources.Get . }}">{{ end }}
+</body>
+{{ end }}

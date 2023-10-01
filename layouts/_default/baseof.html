@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+
+<head>
+    {{ partial "head" . }}
+    {{ block "custom_head" . }}
+    {{ end }}
+    {{ block "head_js" . }}
+    {{ end }}
+    {{ block "head_css" . }}
+    {{ end }}
+</head>
+
+{{ block "body" . }}
+{{ end }}
+
+
+{{ block "foot" . }}
+{{ end }}
+</html>

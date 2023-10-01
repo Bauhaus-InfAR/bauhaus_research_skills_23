@@ -49,3 +49,7 @@ po/*~
 rsconnect/
 
 /.quarto/
+
+.hugo_build.lock
+
+/public/

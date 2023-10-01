@@ -1,0 +1,20 @@
+{{ define "body" }}
+<body>
+  {{ block "header" . }}
+  {{ partial "header" . }}
+  {{ end }}
+
+  {{ block "main" . }}
+  <!-- Add Body Here -->
+  {{ end }}
+
+  {{ partial "footer" . }}
+  {{ block "footer_js" . }}
+  {{ end }}
+  {{ with .Resources.Get .Params.footer_js }}<script src="{{ . }}" type="text/javascript"></script>{{ end }}
+  {{ block "footer_css" . }}
+  {{ end }}
+  {{ with .Resources.Get .Params.footer_css }}
+  <link rel="stylesheet" href="{{ resources.Get . }}">{{ end }}
+</body>
+{{ end }}
