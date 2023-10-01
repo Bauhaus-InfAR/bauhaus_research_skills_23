@@ -4,7 +4,7 @@ date: "2023-10-08"
 format: hugo-md
 type: revealjs
 execute:
-  echo: false
+  echo: true
 ---
 
 ## Welcome
@@ -55,8 +55,40 @@ execute:
 
 ## scatter
 
+``` r
+library(ggplot2)
+main_col = "#1860ac"
+update_geom_defaults("point", list(colour = main_col, size = 3))
+update_geom_defaults("bar", list(colour = main_col, fill = paste0(main_col, "aa")))
+my_theme <- theme(
+        line = element_line(colour = main_col),
+        text = element_text(colour = main_col),
+        plot.background = element_blank(),
+        panel.background = element_rect(
+            fill = "white",
+            colour = main_col),
+        panel.grid.major = element_line(colour = paste0(main_col, "30")),
+        panel.grid.minor = element_line(colour = paste0(main_col, "25")),
+        axis.ticks = element_line(colour = "white"),
+        axis.text = element_text(colour = "white", size = 12),
+        axis.title = element_text(colour = "white", size = 18),
+        axis.title.x.bottom = element_text(vjust=-0.5)
+    )
+df <- tibble::tibble(x = rnorm(100), y = x + rnorm(100))
+df |>
+    ggplot(aes(x, y)) +
+    geom_point() +
+    labs(x = "blah", y = "blee") +
+    my_theme
+```
+
 <img src="index.markdown_strict_files/figure-markdown_strict/unnamed-chunk-3-1.png" width="768" />
 
 ## Hist
+
+``` r
+df |>
+    ggplot(aes(x)) + geom_histogram() + my_theme
+```
 
 <img src="index.markdown_strict_files/figure-markdown_strict/unnamed-chunk-4-1.png" width="768" />

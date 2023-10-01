@@ -4,7 +4,7 @@ date: "2023-10-08"
 format: hugo-md
 type: revealjs
 execute:
-  echo: false
+  echo: true
 ---
 
 ```{r}

@@ -9,15 +9,23 @@
 }
 
 a.tab-label {
-	padding: 0 10px;
+	padding: 2px 20px;
 	border: solid 1px rgb(var(--alt-col));
 	border-bottom: none;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-	background: rgba(var(--alt-col), .2);
+	background: none;
 	color: rgb(var(--alt-col));
 	font-weight: 400;
 	cursor: pointer;
+	text-decoration: none;
+}
+
+a.tab-label:hover {
+	border: solid 1px rgb(var(--alt-col));
+	border-bottom: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 a.tab-label:hover, a.tab-label:not(.active):focus-visible {
@@ -27,10 +35,9 @@ a.tab-label:hover, a.tab-label:not(.active):focus-visible {
 }
 
 a.tab-label.active {
-	background: rgb(var(--alt-col));
-	color: white;
-	border-color: rgb(var(--alt-col));
-	outline: none;
+	background: white;
+	color: var(--r-background-color);
+	border-color: white;
 }
 
 .tab-container {
@@ -38,18 +45,19 @@ a.tab-label.active {
 }
 
 .tab-content {
-	z-index: 0;
-	position: absolute;
+	display: none;
 	width: 100%;
     height: 100%;
 }
 
 .tab-content.active {
-	z-index: 1;	
-	background: white;
+	display: block;
+	height: fit-content;
+	background: #0004;
+	border: solid 1px;
 }
 
-.tab-content.active::before {
+/* .tab-content.active::before {
 	content: "Loading...";
 	position: absolute;
 	top: 0;
@@ -60,9 +68,16 @@ a.tab-label.active {
 	align-items: center;
 	justify-content: center;
 	z-index: -1;
-}
+} */
 
 .tabset iframe {
 	margin: 0;
     /* height: 100%; */
+}
+
+.img-container {
+	position: relative;
+	width: 100%;
+	display: flex; 
+	justify-content: center;
 }

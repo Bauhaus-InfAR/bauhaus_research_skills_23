@@ -1,3 +1,18 @@
+document.querySelectorAll(".reveal .highlight+img").forEach((image, i) => {
+    const code = image.previousElementSibling
+    code.id = "Code"
+    const prevEl = code.previousElementSibling
+    const container = document.createElement("DIV")
+    container.classList.add("tabset")
+    prevEl.insertAdjacentElement("afterend", container)
+    const imgContainer = document.createElement("DIV")
+    imgContainer.classList.add("img-container")    
+    imgContainer.id = "Plot"
+    imgContainer.append(image)
+    container.append(imgContainer)
+    container.append(code)
+})
+
 document.querySelectorAll(".tabset").forEach((ts) => {
     const tabHeader = document.createElement("div");
     tabHeader.classList.add("tab-header");

@@ -39,7 +39,7 @@
 /* NameVariableMagic */ .chroma .vm {  }
 /* Literal */ .chroma .l {  }
 /* LiteralDate */ .chroma .ld {  }
-/* LiteralString */ .chroma .s { color: #555; font-weight: bold; }
+/* LiteralString */ .chroma .s { color: rgb(var(--code-col-1)); font-weight: bold; }
 /* LiteralStringAffix */ .chroma .sa { color: rgb(var(--code-col-1)) }
 /* LiteralStringBacktick */ .chroma .sb { color: rgb(var(--code-col-1)) }
 /* LiteralStringChar */ .chroma .sc { color: rgb(var(--code-col-1)) }
