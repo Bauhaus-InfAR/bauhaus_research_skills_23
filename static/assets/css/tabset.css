@@ -10,28 +10,28 @@
 
 a.tab-label {
 	padding: 2px 20px;
-	border: solid 1px rgb(var(--alt-col));
+	border: solid 1px white;
 	border-bottom: none;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	background: none;
-	color: rgb(var(--alt-col));
+	color: white;
 	font-weight: 400;
 	cursor: pointer;
 	text-decoration: none;
 }
 
 a.tab-label:hover {
-	border: solid 1px rgb(var(--alt-col));
+	border: solid 1px white;
 	border-bottom: none;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
 
 a.tab-label:hover, a.tab-label:not(.active):focus-visible {
-	background: rgba(var(--theme-col), .2);
-	color: rgb(var(--theme-col));
-	border-color: rgb(var(--theme-col));
+	background: #0004;
+	color: white;
+	border-color: white;
 }
 
 a.tab-label.active {
@@ -55,6 +55,7 @@ a.tab-label.active {
 	height: fit-content;
 	background: #0004;
 	border: solid 1px;
+	box-sizing: content-box;
 }
 
 /* .tab-content.active::before {

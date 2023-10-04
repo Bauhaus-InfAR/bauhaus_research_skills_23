@@ -14,7 +14,32 @@
 <script src="/assets/site_libs/revealjs/plugin/zoom/zoom.js"></script>
 <script src="/assets/site_libs/revealjs/plugin/math/math.js"></script>
 <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
+<script>
+  function wrap(toWrap, tag, cls) {
+    const wrapper = document.createElement(tag);
+    wrapper.classList.add(...cls)
+    toWrap.parentNode.insertBefore(wrapper, toWrap);
+    return wrapper.appendChild(toWrap);
+  };
+  document.querySelectorAll(".incremental li, .incremental > :not(ul)").forEach(el => el.classList.add("fragment"));
+  document.querySelectorAll('img[alt]').forEach(img => {
+    note = document.createElement("div");
+    note.classList.add("img-caption");
+    const caption = img.alt.replaceAll("+", "&nbsp;");
+    note.innerHTML = img.hasAttribute("data-source") ? caption + " (<a href=" + img.dataset.source + ">source</a>)" : caption;
+    const classesToAdd = ["img-caption-container"];
+    if (img.classList.contains("rot")) note.classList.add("rot");
+    wrap(img, "div", classesToAdd);
+    img.parentElement.append(note)
+  });
+  let previousRotation =  Math.round(Math.random() * 100 - 50) / 10
+  document.querySelectorAll(".rot").forEach(el => {
+    rotation = el.previousElementSibling?.classList.contains("rot") ? -previousRotation * Math.random() * 1.5  : Math.round(Math.random() * 100 - 50) / 10;
+    el.style.transform =  el.tagName === "IMG" ? "rotateZ(" + rotation + "deg)": "translateX(" + Math.round(Math.random() * 40 - 20) + "%) rotateZ(" + rotation + "deg)";
+    previousRotation = rotation
+  })
+  if (window.location !== window.parent.location) document.getElementById("home").remove();
+</script>
 <script>
 
     // Full list of configuration options available at:
