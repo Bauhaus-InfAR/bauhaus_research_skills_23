@@ -82,28 +82,38 @@ Belvederer Allee 1
 
 cv = list(
     list(
+        when="2005-2010",
+        what="Mgr (MSc) Psychology",
+        where="Komenius University, Bratislava"
+    ),
+    list(
+        when="2011-2015",
         what="PhD Psychology",
-        where="University of Edinburgh",
-        when="2011-2015"
+        where="University of Edinburgh"
     ),
     list(
+        when="2015-2017",
         what="Psychometrics",
-        where="Royal College of Surgeons of Edinburgh",
-        when="2015-2017"
+        where="Royal College of Surgeons of Edinburgh"
     ),
     list(
-        what="Teacher/Lecturer in research methods & statistics",
-        where="Universities of Edinburgh and Sussex",
-        when="2017-2022"
+        when="2017-2019",
+        what="Postdoctoral Tutor in statistics",
+        where="University of Edinburgh"
     ),
     list(
+        when="2019-2022",
+        what="Lecturer in research methods & statistics",
+        where="University of Sussex"
+    ),
+    list(
+        when="2022-present",
         what="Research associate",
-        where="InfAR @ Bauhaus",
-        when="2022-present"
+        where="InfAR @ Bauhaus"
     )
 )
 
-make_timeline("Who am I?", cv)
+make_timeline("Who am I?", cv, show_heading = FALSE)
 ```
 
 
@@ -135,39 +145,32 @@ make_timeline("Who am I?", cv)
 
 timeline = list(
     list(
-        what="Research topic",
-        where="",
-        when="Week 2"
+        when="Week 2",
+        what="Research topic"
     ),
     list(
-        what="Research question",
-        where="",
-        when="Week 3"
+        when="Week 3",
+        what="Research question"
     ),
     list(
-        what="Hypothesis/-es",
-        where="",
-        when="Week 4"
+        when="Week 4",
+        what="Hypothesis/-es"
     ),
     list(
-        what="Methodology",
-        where="",
-        when="Week 7"
+        when="Week 7",
+        what="Methodology"
     ),
     list(
-        what="Data collection",
-        where="",
-        when="Week 10"
+        when="Week 10",
+        what="Data collection"
     ),
     list(
-        what="Data analysis",
-        where="",
-        when="Week 12"
+        when="Week 12",
+        what="Data analysis"
     ),
     list(
-        what="Project submission",
-        where="",
-        when="January 2024"
+        when="January 2024",
+        what="Project submission"
     )
 )
 
