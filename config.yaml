@@ -1,7 +1,15 @@
 baseurl: /
 languageCode: en-us
 author:
+    title: Dr
     name: Milan Valášek
+    email: milan.valasek@uni-weimar.de
+    address: |
+        InfAR
+
+        Room 203
+        
+        Belvederer Alee 1
 title: Research Skills for IUDD
 googleAnalytics: ""
 disqusShortname: "mival"
@@ -29,6 +37,8 @@ enableEmoji: true
 markup:
     defaultMarkdownHandler: goldmark
     goldmark:
+        extensions:
+            fences: true
         renderer:
             unsafe: true
         parser:
