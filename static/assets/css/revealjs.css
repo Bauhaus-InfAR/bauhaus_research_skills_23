@@ -101,3 +101,52 @@
   background-color: white;
   color: black;
 }
+
+.img-caption-container {
+	display: block;
+	width: fit-content;
+	text-align: ;
+	font-size: .8em;
+	margin: auto;
+}
+
+.img-caption {
+	max-width: 80%;
+	margin-inline: auto;
+  margin-top: .5em;
+}
+
+.img-caption.rot {
+  max-width: 500px;
+	margin-top: 0;
+	background: white;
+	color: #333;
+	padding: 3px 10px;
+	box-shadow: 5px 5px 10px 0 #333;
+}
+
+.frame {
+	border: solid 10px white;
+	box-shadow: 5px 5px 10px 0 #333;
+  background-color: white;
+}
+
+#home {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 1;
+	font-size: 1.5em;
+}
+
+html:fullscreen #home {
+  display: none;
+}
+
+#home a {
+  color: white
+}
+
+#home a:hover {
+  border-bottom: none;
+}
