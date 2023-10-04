@@ -49,7 +49,11 @@
 {{ end }}
   <h2 class="{{ $headingClass }}" data-id="{{ $dataId }}">{{ $headingText }}</h2>
   {{/*  {{ $p | string  }}  */}}
+  {{/*  multiline classes  open */}}
   {{ $p = replaceRE `<p>::{.(.*?)}\s*</p>` "<div class='$1'>" $p }}
+  {{/*  inline classes  */}}
+  {{ $p = replaceRE `<p>(.*?){.(.*?)}\s*</p>` "<p class='$2'>$1</p>" $p }}
+  {{/*  multiline classes  close */}}
   {{ $p = replaceRE `<p>::\s*</p>` "</div>" $p }}
   {{ print (replaceRE `.*/h2>` "" $p) | safeHTML }}
 </section> 
