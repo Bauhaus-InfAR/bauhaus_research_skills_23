@@ -15,22 +15,66 @@ knitr::opts_chunk$set(dev.args = list(bg="transparent"))
 
 ```
 
-## Welcome
+## Today
 
 <!-- these fences CANNOT be nested -->
-::{.incremental}
+<!-- ::{.incremental}
 
 - something
+- another thing
 
-**bold**
+not a bullet point but still incremental
 
-[some link](https://www.google.com)
+:: -->
+
+
+::{.incremental}
+
+- Getting to know each other
+- Why research skills?
+- Learning outcomes
+- Course curriculum
+- Assessment
+- Course timeline
 
 ::
 
-## chrom
+<!-- ## chrom
 
-![Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis+&+Prakash, Science, 215:1525, 1982](http://book.bionumbers.org/wp-content/uploads/2014/07/505-f2-HumanChimpChromosomes-1.png){.frame .rot height=500 source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/"}
+![Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis+&+Prakash, Science, 215:1525, 1982](../humanChimpChromosomes.png){.frame .rot height=500 source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/"} -->
+
+## Who am I?
+
+::{.contact}
+
+```{=html}
+<div>
+```
+![](../assets/mv.jpg){.hero .frame height=150}
+
+
+\#notanarchitect
+```{=html}
+</div>
+<div class="frame rot">
+```
+Milan (he/him)
+
+<milan.valasek@uni-weimar.de>
+
+\ 
+
+InfAR
+
+Room 203
+
+Belvederer Allee 1
+```{=html}
+</div>
+```
+
+::
+
 
 ```{r}
 #| results: 'asis'
@@ -63,19 +107,69 @@ make_timeline("Who am I?", cv)
 ```
 
 
-## scatter
+## Who are you?
+
+- What's your name?
+- Where is home?
+- What's your academic background?
+- Do you have experience conducting research (qualitative or quantitative)?
+- What interests you about urban development and design
+- A fun fact about you
+    - hobby
+    - special ability
+    - favourite show/movie...
+
+## Why research skills? {.incremental}
+
+- This is a Master of __Science__ programme
+- You will be required to produce a research<sup>1</sup> thesis
+
+1\. or design...{.fn}
+
+
+<!-- Course timeline -->
 
 ```{r}
-df <- tibble::tibble(x = rnorm(100), y = x + rnorm(100))
-df |>
-    ggplot(aes(x, y)) +
-    geom_point() +
-    labs(x = "blah", y = "blee")
-```
+#| results: 'asis'
+#| echo: false
 
-## Hist
+timeline = list(
+    list(
+        what="Research topic",
+        where="",
+        when="Week 2"
+    ),
+    list(
+        what="Research question",
+        where="",
+        when="Week 3"
+    ),
+    list(
+        what="Hypothesis/-es",
+        where="",
+        when="Week 4"
+    ),
+    list(
+        what="Methodology",
+        where="",
+        when="Week 7"
+    ),
+    list(
+        what="Data collection",
+        where="",
+        when="Week 10"
+    ),
+    list(
+        what="Data analysis",
+        where="",
+        when="Week 12"
+    ),
+    list(
+        what="Project submission",
+        where="",
+        when="January 2024"
+    )
+)
 
-```{r}
-df |>
-    ggplot(aes(x)) + geom_histogram()
+make_timeline("Course timeline", timeline, font_size = 21)
 ```

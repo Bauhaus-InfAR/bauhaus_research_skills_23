@@ -1,0 +1,78 @@
+---
+title: Introduction to Research Skills
+date: "2023-10-08"
+format: hugo-md
+type: revealjs
+execute:
+  echo: true
+draft: true
+---
+
+
+## Heading
+
+<!-- these fences CANNOT be nested -->
+::{.incremental}
+
+- something
+- another thing
+
+not a bullet point but still incremental
+
+::
+
+
+## Image captions
+
+- `.frame` class adds a white border to image and caption
+- `.rot` class slightly rotates image and caption
+- `source=` attribute adds link to source in caption
+
+![Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis+&+Prakash, Science, 215:1525, 1982](../humanChimpChromosomes.png){.frame .rot height=500 source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/"} -->
+
+
+<!-- The below produces an animated timeline of CV -->
+```{r}
+#| results: 'asis'
+#| echo: false
+
+cv = list(
+    list(
+        what="PhD Psychology",
+        where="University of Edinburgh",
+        when="2011-2015"
+    ),
+    list(
+        what="Psychometrics",
+        where="Royal College of Surgeons of Edinburgh",
+        when="2015-2017"
+    ),
+    list(
+        what="Teacher/Lecturer in research methods & statistics",
+        where="Universities of Edinburgh and Sussex",
+        when="2017-2022"
+    ),
+    list(
+        what="Research associate",
+        where="InfAR @ Bauhaus",
+        when="2022-present"
+    )
+)
+
+make_timeline("Who am I?", cv)
+```
+
+
+## scatter
+
+- `R` plots are displayed in tabsets with code available
+- custom `ggplot2` theme set by default
+
+```{r}
+df <- tibble::tibble(x = rnorm(100), y = x + rnorm(100))
+df |>
+    ggplot(aes(x, y)) +
+    geom_point() +
+    labs(x = "blah", y = "blee")
+```
+
