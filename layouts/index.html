@@ -9,7 +9,28 @@
             <section id="intro">
                 {{ .Content }}
             </section>
-            <section id="week_list-section">
+            <section id="course-lead">
+                <h2>Course lead</h2>                
+                <div id="hero">
+                {{ with resources.Get "img/mv.jpg" }}
+                {{ with .Resize "160x"}}
+                <img src="{{ .RelPermalink }}" alt="Picture of Milan Valasek">
+                {{ end }}
+                {{ end }}
+                </div>
+                <div id="contact">
+                <div id="name">
+                {{ .Site.Author.title }} {{ .Site.Author.name }}
+                </div>
+                <div id="email">
+                    <a href="mailto:{{ .Site.Author.email }}">{{ .Site.Author.email }}</a>
+                </div>
+                <div id="address">
+                    {{ .Site.Author.address | markdownify }}
+                </div>
+                </div>
+            </section>
+            <section id="week-list-section">
                 {{ range sort .Pages "File.Path" }}
                 <details><summary><h2><span class="week-number">Week {{ replaceRE ".*?0?(\\d+).*" "$1" .File.Dir }}</span>{{ .Title }}</h2></summary>
                 <p>{{ .Content }}</p>

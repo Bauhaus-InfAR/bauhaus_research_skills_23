@@ -5,6 +5,9 @@
 {{ define "body" }}
 <body class="quarto-light">
 <img src="/img/buw_logo.svg" class="slide-logo">
+<div id="home">
+  <a href="/"><i class="fa-solid fa-house"></i></a>
+</div>
 <div class="reveal">
 <div class="slides">
 
@@ -21,6 +24,7 @@
   </section>
 
 {{/*  {{ $content := replaceRE `(<img.*?>)` "<div class='blergh>$1</div>" .Content }}  */}}
+
 {{ $paragraphs := split .Content "<h2 " }}
 {{ range $index, $p := $paragraphs }}
 {{ if eq $index 0}}
@@ -44,6 +48,9 @@
 <section id="{{ $headingText | urlize }}" class="slide level2">
 {{ end }}
   <h2 class="{{ $headingClass }}" data-id="{{ $dataId }}">{{ $headingText }}</h2>
+  {{/*  {{ $p | string  }}  */}}
+  {{ $p = replaceRE `<p>::{.(.*?)}\s*</p>` "<div class='$1'>" $p }}
+  {{ $p = replaceRE `<p>::\s*</p>` "</div>" $p }}
   {{ print (replaceRE `.*/h2>` "" $p) | safeHTML }}
 </section> 
 {{ end}}
