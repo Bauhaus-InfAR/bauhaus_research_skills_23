@@ -9,11 +9,21 @@ execute:
 
 ## Welcome
 
+<!-- these fences CANNOT be nested -->
+
+::{.incremental}
+
 -   something
 
 **bold**
 
 [some link](https://www.google.com)
+
+::
+
+## chrom
+
+<img src="http://book.bionumbers.org/wp-content/uploads/2014/07/505-f2-HumanChimpChromosomes-1.png" class="frame rot" data-source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/" height="500" alt="Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis+&amp;+Prakash, Science, 215:1525, 1982" />
 
  <h2 class="hidden" auto-animate="true" auto-animate-easing="ease-in-out">Who am I?</h2>
 <div class="animate-title" data-id="animate-title">Who am I?</div>
@@ -56,30 +66,11 @@ execute:
 ## scatter
 
 ``` r
-library(ggplot2)
-main_col = "#1860ac"
-update_geom_defaults("point", list(colour = main_col, size = 3))
-update_geom_defaults("bar", list(colour = main_col, fill = paste0(main_col, "aa")))
-my_theme <- theme(
-        line = element_line(colour = main_col),
-        text = element_text(colour = main_col),
-        plot.background = element_blank(),
-        panel.background = element_rect(
-            fill = "white",
-            colour = main_col),
-        panel.grid.major = element_line(colour = paste0(main_col, "30")),
-        panel.grid.minor = element_line(colour = paste0(main_col, "25")),
-        axis.ticks = element_line(colour = "white"),
-        axis.text = element_text(colour = "white", size = 12),
-        axis.title = element_text(colour = "white", size = 18),
-        axis.title.x.bottom = element_text(vjust=-0.5)
-    )
 df <- tibble::tibble(x = rnorm(100), y = x + rnorm(100))
 df |>
     ggplot(aes(x, y)) +
     geom_point() +
-    labs(x = "blah", y = "blee") +
-    my_theme
+    labs(x = "blah", y = "blee")
 ```
 
 <img src="index.markdown_strict_files/figure-markdown_strict/unnamed-chunk-3-1.png" width="768" />
@@ -88,7 +79,7 @@ df |>
 
 ``` r
 df |>
-    ggplot(aes(x)) + geom_histogram() + my_theme
+    ggplot(aes(x)) + geom_histogram()
 ```
 
 <img src="index.markdown_strict_files/figure-markdown_strict/unnamed-chunk-4-1.png" width="768" />
