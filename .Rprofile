@@ -47,18 +47,31 @@ make_title <- function(title, include_title=FALSE, font_size) {
         sep = "\n")
 }
 
-make_timeline <- function(title, content, font_size = 25, highlight_last = TRUE) {
+make_timeline <- function(
+    title,
+    content,
+    font_size = 25,
+    show_heading = TRUE,
+    highlight_last = TRUE) {
 
     formatted_content <- list()
     for (i in seq_along(content)) {
+
         formatted_content[[i]] <- wrap(
             wrap(
-                paste(
-                    wrap(content[[i]]$when, class = "when"),
-                    wrap(content[[i]]$what, class = "what"),
-                    wrap(content[[i]]$where, class = "where"),
-                    sep = "\n"
-                ), class = "timeline-item"
+                lapply(
+                    seq_along(content[[i]]),
+                    \(j) {
+                        x <- content[[i]]
+                        cls <- names(x)[j]
+                        if (j == 1) {
+                            cls <- paste(cls, "item-heading")
+                        } else if (j == 2) {
+                            cls <- paste(cls, "item-title")
+                        }
+                        wrap(x[j], class = cls)
+                    }) |> paste(collapse = "\n"),
+                class = "timeline-item"
             ),
             tag = "li",
             class = ifelse(highlight_last & i == length(content), "last", ""),
@@ -70,12 +83,15 @@ make_timeline <- function(title, content, font_size = 25, highlight_last = TRUE)
     for (i in seq_along(formatted_content)) {
         current_content <- paste(formatted_content[1:i], collapse = "")
         current_content <- paste(
-            current_content, wrap(class = "line", attr = paste0('data-id="line" style="grid-row:1/', i+1, ';"')),
+            current_content,
+            wrap(
+                class = "line",
+                attr = paste0('data-id="line" style="grid-row:1/', i+1, ';"')),
             sep = "\n"
             )
         out <- paste0(
             out,
-            make_title(title, i == 1, font_size),
+            make_title(title, show_heading & i == 1, font_size),
             wrap(
                 current_content,
                 tag = "ul",

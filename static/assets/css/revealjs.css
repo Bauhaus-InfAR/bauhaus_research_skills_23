@@ -207,11 +207,6 @@ html:fullscreen #home {
   width: fit-content;
   height: fit-content;
   position:relative;
-  margin-bottom:1em;
-  color:#444;
-  background:#fff;
-  box-shadow:6px 7px 10px -5px rgba(0,0,0,.6666666667);
-  padding-bottom:.5em
 }
 .reveal .slide .timeline ul li:nth-child(odd) {
 	grid-column: 1;
@@ -252,19 +247,35 @@ html:fullscreen #home {
 	background: #f59f00;
 	border-color: #f59f00;
 }
-.reveal .when{
+
+.reveal .timeline-item {
+  font-size:.8em;
+  margin-bottom:1em;
+  color:#444;
+  background:#fff;
+  box-shadow:6px 7px 10px -5px rgba(0,0,0,.6666666667);
+}
+
+.timeline-item > * {
+  padding:0 .3em
+}
+
+.timeline-item > *:last-child {
+  padding-bottom:.5em
+}
+.reveal .item-heading{
   background-color:#f59f00;
   font-weight:400;
   color:#fff;
-  padding:.5em 8px;
+  padding:.5em .3em;
   transform: translate(.4em, -.4em);
 }
-.reveal li:nth-child(even) .when{
+.reveal li:nth-child(even) .item-heading{
   transform: translate(-.4em, -.4em);
 }
-.reveal .where{font-size:.8em;padding:0 8px
-}
-.reveal .what {
+
+.reveal .item-title {
+  font-size: 1.2em;
   padding: 0 .3em .5em .3em;
 }
 
