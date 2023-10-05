@@ -56,9 +56,14 @@
   {{/*  multiline classes  close */}}
   {{ $p = replaceRE `<p>::\s*</p>` "</div>" $p }}
   {{ print (replaceRE `.*/h2>` "" $p) | safeHTML }}
-</section> 
+</section>
 {{ end}}
 {{ end }}
+<section id="any-questions">
+  <h2 class="middle">Any questions?</h2>
+</section>
+<section data-background='{{ with resources.Get "img/end.jpg" }}{{ .RelPermalink }}{{ end }}'>
+</section>
 </div>
 </div>
 </body>
