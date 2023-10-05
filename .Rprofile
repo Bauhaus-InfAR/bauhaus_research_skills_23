@@ -75,7 +75,7 @@ make_timeline <- function(
             ),
             tag = "li",
             class = ifelse(highlight_last & i == length(content), "last", ""),
-            attr = paste0('data-id="p', i, '"')
+            attr = paste0('data-id="p', i, '" data-auto-animate-delay="0.7"')
         )
     }
 
@@ -87,6 +87,9 @@ make_timeline <- function(
             wrap(
                 class = "line",
                 attr = paste0('data-id="line" style="grid-row:1/', i+1, ';"')),
+            wrap(
+                class = "dot",
+                attr = paste0('data-id="dot" style="grid-row:', i, ';"')),
             sep = "\n"
             )
         out <- paste0(
