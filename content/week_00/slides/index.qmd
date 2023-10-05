@@ -261,7 +261,7 @@ make_timeline("Assignment roadmap", timeline, font_size = 21)
 
 ::{.column}
 
-### **I**
+### **Me**
 
 - Do my best to make this interesting & relevant
 - Try to meet you where you are
