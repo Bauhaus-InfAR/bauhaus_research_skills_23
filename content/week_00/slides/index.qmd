@@ -7,13 +7,6 @@ execute:
   echo: true
 ---
 
-```{r}
-#| label: setup
-#| include: false
-
-knitr::opts_chunk$set(dev.args = list(bg="transparent"))
-
-```
 
 ## Today
 
@@ -42,6 +35,15 @@ not a bullet point but still incremental
 <!-- ## chrom
 
 ![Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis+&+Prakash, Science, 215:1525, 1982](../humanChimpChromosomes.png){.frame .rot height=500 source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/"} -->
+
+## Ground rules
+
+- Be kind and respectful
+- Let's make everyone feel safe with respect to who they are
+    - No racism :raised_fist::skin-tone-6: :raised_fist::skin-tone-4: :raised_fist::skin-tone-2:
+    - No sexism :female_sign: :transgender_symbol: :male_sign:
+    - LGBTQ+ inclusive environment :rainbow:
+- It's OK to disagree but let's keep things friendly
 
 ## Who am I?
 
@@ -129,15 +131,75 @@ make_timeline("Who am I?", cv, show_heading = FALSE)
     - special ability
     - favourite show/movie...
 
-## Why research skills? {.incremental}
+## Why research skills?
 
-- This is a Master of __Science__ programme
+::{.incremental}
+
+- This is a Master of **Science** programme
 - You will be required to produce a research<sup>1</sup> thesis
+- Your practice as architects, urban planners, designers, and policy influencers should be **evidence-based**
+- Understanding how research is done is just good for the soul :upside_down:
 
 1\. or design...{.fn}
 
+::
 
-<!-- Course timeline -->
+## Learning outcomes
+
+By the end of this course you will:
+
+::{.incremental}
+
+- be familiar with basic concepts in philosophy of science
+- understand the difference in **qualitative** and **quantitative** approaches to research and their respective merits
+- appreciate the value of **theory** and its relationship with **research questions** and **hypotheses**
+- understand the role of **measurement** in science
+- know the principle of **hypothesis testing**
+- learn how the world can be described with **statistics**
+- able to **conduct and write about your own research**
+
+::
+
+## Curriculum
+
+```{r}
+#| echo: false
+
+curr <- data.frame(Week = 1:13, Topic = c(
+    "Intro to philosophy of science",
+    "Research question, hypothesis, theory",
+    "<div style='text-align:center'>Public holiday :tada: :tada: :tada:</div>",
+    "Qualitative and Quantitative methods",
+    "Study design",
+    "Data and levels of measurement",
+    "Designing measures",
+    "Collecting data",
+    "Descriptive statistics",
+    "Basic data visualisation",
+    "Probability distributions",
+    "Statistical testing & correlation",
+    "Writing an academic paper/report"
+))
+
+curr |>
+    kableExtra::kbl(align = "cl", escape = FALSE) |>
+    kableExtra::kable_styling(full_width = T)
+```
+
+## Assessment
+
+### 60% in class engagement & homework
+
+- Take part in discussion
+- Submit homework on time
+- Engage in peer review
+- Follow the [assignment roadmap](./#/assignment-roadmap)
+
+### 40% end of term assignment
+
+- Well-written and -formatted report on your mini-project
+
+<!-- Assignment roadmap -->
 
 ```{r}
 #| results: 'asis'
@@ -149,11 +211,11 @@ timeline = list(
         what="Research topic"
     ),
     list(
-        when="Week 3",
+        when="Week 4",
         what="Research question"
     ),
     list(
-        when="Week 4",
+        when="Week 5",
         what="Hypothesis/-es"
     ),
     list(
@@ -174,5 +236,39 @@ timeline = list(
     )
 )
 
-make_timeline("Course timeline", timeline, font_size = 21)
+make_timeline("Assignment roadmap", timeline, font_size = 21)
 ```
+
+## The deal
+
+::{.columns tight}
+
+::{.column}
+
+### **You**
+
+- Come to class
+- Engage actively
+- Ask questions (there are no stupid Qs!)
+- Do your homework
+- Put in the effort
+- Ask for help if you are struggling
+- Give me feedback
+- Have patience with yourself, one another, me
+
+::
+
+
+::{.column}
+
+### **I**
+
+- Do my best to make this interesting & relevant
+- Try to meet you where you are
+- Will be flexible and responsive about the curriculum
+- Carefully read all your homework and assignment submission
+- Give thorough & helpful feedback
+
+::
+
+::
