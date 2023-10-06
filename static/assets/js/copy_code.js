@@ -56,7 +56,7 @@ function copyTextToClipboard(text) {
 }
 
 function addCopyButtons() {
-    let copyDivs = document.querySelectorAll("pre.chroma");
+    let copyDivs = document.querySelectorAll("pre.sourceCode");
     if (copyDivs.length === 0) return;
 
     for (let i = 0; i < copyDivs.length; i++) {

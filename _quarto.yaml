@@ -6,6 +6,9 @@ project:
 format: 
   hugo-md:
     code-fold: false
+  markdown: 
+    fig-dpi: 300
+    fig-height: 4
   
 execute: 
   warning: false

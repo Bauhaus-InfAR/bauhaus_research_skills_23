@@ -22,15 +22,14 @@
     return wrapper.appendChild(toWrap);
   };
   document.querySelectorAll(".incremental li, .incremental > :not(ul)").forEach(el => el.classList.add("fragment"));
-  document.querySelectorAll('img[alt]').forEach(img => {
-    note = document.createElement("div");
-    note.classList.add("img-caption");
-    const caption = img.alt.replaceAll("+", "&nbsp;");
-    note.innerHTML = img.hasAttribute("data-source") ? caption + " (<a href=" + img.dataset.source + ">source</a>)" : caption;
+  document.querySelectorAll('img[data-source]').forEach(img => {
+    caption = img.nextElementSibling;
+    if (caption.tagName !== "FIGCAPTION") return
+    caption.classList.add("img-caption");
+    if (img.hasAttribute("data-source")) caption.innerHTML = caption.innerHTML + " (<a href=" + img.dataset.source + ">source</a>)"
     const classesToAdd = ["img-caption-container"];
-    if (img.classList.contains("rot")) note.classList.add("rot");
-    wrap(img, "div", classesToAdd);
-    img.parentElement.append(note)
+    if (img.classList.contains("rot")) caption.classList.add("rot");
+    img.parentElement.classList.add(...classesToAdd)
   });
   let previousRotation =  Math.round(Math.random() * 100 - 50) / 10
   document.querySelectorAll(".rot").forEach(el => {

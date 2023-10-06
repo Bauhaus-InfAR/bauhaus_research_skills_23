@@ -83,3 +83,7 @@
 /* GenericTraceback */ .chroma .gt { color: #0044dd }
 /* GenericUnderline */ .chroma .gl { text-decoration: underline }
 /* TextWhitespace */ .chroma .w { color: #bbbbbb }
+
+.sourceCode .fu { color: rgb(var(--code-col-2)); font-weight: bold; }
+.sourceCode .dv { color: rgb(var(--code-col-1)); }
+.sourceCode .st { color: rgb(var(--code-col-1)); font-weight: bold; }

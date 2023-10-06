@@ -1,40 +1,28 @@
 ---
 title: Introduction to Research Skills
 date: "2023-10-08"
-format: hugo-md
+format: markdown
 type: revealjs
 execute:
   echo: true
+prefer-html: true
 ---
 
 
 ## Today
 
-<!-- these fences CANNOT be nested -->
-<!-- ::{.incremental}
-
-- something
-- another thing
-
-not a bullet point but still incremental
-
-:: -->
-
-
-::{.incremental}
-
+:::{.incremental}
 - Getting to know each other
 - Why research skills?
 - Learning outcomes
 - Course curriculum
 - Assessment
 - Course timeline
-
-::
+:::
 
 <!-- ## chrom
 
-![Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis+&+Prakash, Science, 215:1525, 1982](../humanChimpChromosomes.png){.frame .rot height=500 source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/"} -->
+![Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis\ &\ Prakash, Science, 215:1525, 1982](../assets/humanChimpChromosomes.png){.frame .rot height=500 source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/"} -->
 
 ## Ground rules
 
@@ -47,19 +35,14 @@ not a bullet point but still incremental
 
 ## Who am I?
 
-::{.contact}
-
-```{=html}
-<div>
-```
+:::{.contact}
+:::{.none}
 ![](../assets/mv.jpg){.hero .frame height=150}
 
 
 \#notanarchitect
-```{=html}
-</div>
-<div class="frame rot">
-```
+:::
+:::{.frame .rot}
 Milan (he/him)
 
 <milan.valasek@uni-weimar.de>
@@ -71,11 +54,8 @@ InfAR
 Room 203
 
 Belvederer Allee 1
-```{=html}
-</div>
-```
-
-::
+:::
+:::
 
 
 ```{r}
@@ -133,32 +113,29 @@ make_timeline("Who am I?", cv, show_heading = FALSE)
 
 ## Why research skills?
 
-::{.incremental}
-
+:::{.incremental}
 - This is a Master of **Science** programme
-- You will be required to produce a research<sup>1</sup> thesis
+- You will be required to produce a research^1^ thesis
 - Your practice as architects, urban planners, designers, and policy influencers should be **evidence-based**
 - Understanding how research is done is just good for the soul :upside_down:
 
 1\. or design...{.fn}
-
-::
+:::
 
 ## Learning outcomes
 
 By the end of this course you will:
 
-::{.incremental}
-
+:::{.incremental}
 - be familiar with basic concepts in philosophy of science
 - understand the difference in **qualitative** and **quantitative** approaches to research and their respective merits
 - appreciate the value of **theory** and its relationship with **research questions** and **hypotheses**
 - understand the role of **measurement** in science
 - know the principle of **hypothesis testing**
 - learn how the world can be described with **statistics**
+- able to **critically evaluate** published literature
 - able to **conduct and write about your own research**
-
-::
+:::
 
 ## Curriculum
 
@@ -168,7 +145,7 @@ By the end of this course you will:
 curr <- data.frame(Week = 1:13, Topic = c(
     "Intro to philosophy of science",
     "Research question, hypothesis, theory",
-    "<div style='text-align:center'>Public holiday :tada: :tada: :tada:</div>",
+    "Public holiday :tada::tada::tada:",
     "Qualitative and Quantitative methods",
     "Study design",
     "Data and levels of measurement",
@@ -182,8 +159,8 @@ curr <- data.frame(Week = 1:13, Topic = c(
 ))
 
 curr |>
-    kableExtra::kbl(align = "cl", escape = FALSE) |>
-    kableExtra::kable_styling(full_width = T)
+    kableExtra:::kbl(align = "cl", escape = FALSE) |>
+    kableExtra:::kable_styling(full_width = T)
 ```
 
 ## Assessment
@@ -239,36 +216,54 @@ timeline = list(
 make_timeline("Assignment roadmap", timeline, font_size = 21)
 ```
 
+## Course resources
+
+- All course content can be found on [Moodle](https://moodle.uni-weimar.de/)
+    - Weekly topics and slides
+    - Additional resources
+    - Course info
+    - Discussion boards
+    - Organisational announcements
+
+
+- For collaborative activities, we'll _try_ using a [Miro board](https://miro.com/welcomeonboard/MVMwS2YxanI3QmpHd3hzNG9CWXpDT3NxaW1ERFZ2dDVZVUo4T2NEZDd1OTN1N2xFdU53Tm1vTlh6UFpLdXBVQnwzNDU4NzY0NTY1MzcyODYzNTkwfDI=?share_link_id=933100515695)
+    - Sign up with your uni email!
+
+## Miro board
+
+<iframe width="100%" height="550px" src="https://miro.com/app/live-embed/uXjVNfgkf3I=/?moveToViewport=-893,-1963,11018,5741&embedId=740713753465" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+
+
 ## The deal
 
-::{.columns tight}
+:::{.columns .tight}
 
-::{.column}
+:::{.column}
 
 ### **You**
 
+:::{.incremental}
 - Come to class
 - Engage actively
-- Ask questions (there are no stupid Qs!)
+- Ask questions (there are no stupid\ Qs!)
 - Do your homework
 - Put in the effort
 - Ask for help if you are struggling
 - Give me feedback
 - Have patience with yourself, one another, me
+:::
+:::
 
-::
-
-
-::{.column}
+:::{.column}
 
 ### **Me**
 
+:::{.incremental}
 - Do my best to make this interesting & relevant
 - Try to meet you where you are
 - Will be flexible and responsive about the curriculum
 - Carefully read all your homework and assignment submission
 - Give thorough & helpful feedback
-
-::
-
-::
+:::
+:::
+:::

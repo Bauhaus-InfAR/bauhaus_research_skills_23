@@ -1,16 +1,18 @@
-document.querySelectorAll(".reveal .highlight+img").forEach((image, i) => {
-    const code = image.previousElementSibling
+document.querySelectorAll(".reveal .cell img").forEach(img => {
+    const container = img.closest(".cell")
+    const code = container.firstElementChild
     code.id = "Code"
-    const prevEl = code.previousElementSibling
-    const container = document.createElement("DIV")
+    // const prevEl = code.previousElementSibling
+    // const container = document.createElement("DIV")
     container.classList.add("tabset")
-    prevEl.insertAdjacentElement("afterend", container)
-    const imgContainer = document.createElement("DIV")
+    // prevEl.insertAdjacentElement("afterend", container)
+    const imgContainer = img.closest(".cell-output-display")
     imgContainer.classList.add("img-container")    
     imgContainer.id = "Plot"
-    imgContainer.append(image)
-    container.append(imgContainer)
-    container.append(code)
+    // imgContainer.append(image)
+    // container.append(imgContainer)
+    // container.append(code)
+    
 })
 
 document.querySelectorAll(".tabset").forEach((ts) => {

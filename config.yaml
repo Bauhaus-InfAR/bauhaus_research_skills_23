@@ -35,15 +35,7 @@ menu:
 enableInlineShortcodes: true
 enableEmoji: true
 markup:
-    defaultMarkdownHandler: goldmark
-    goldmark:
-        extensions:
-            fences: true
-        renderer:
-            unsafe: true
-        parser:
-            attribute:
-                block: true
+    defaultMarkdownHandler: pandoc
     highlight:
         style: pygments
         noClasses: false

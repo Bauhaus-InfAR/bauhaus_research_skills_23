@@ -22,43 +22,32 @@
   <p class="institute">Bauhaus-University Weimar</p>
   </div>
   </section>
-
-{{/*  {{ $content := replaceRE `(<img.*?>)` "<div class='blergh>$1</div>" .Content }}  */}}
-
 {{ $paragraphs := split .Content "<h2 " }}
 {{ range $index, $p := $paragraphs }}
 {{ if eq $index 0}}
 {{ else }}
-{{ $heading := index ( index (findRESubmatch `.*?h2>` $p) 0 ) 0 }}
-{{ $headingText := replaceRE `.*?>(.*?)<.*` "$1" $heading }}
-{{ $isAnimated := in $heading "auto-animate" }}
-{{ $animation := index ( index ( findRESubmatch `animate-easing="(.*?)"` $heading ) 0 ) 0 }}
-{{ $animation = replaceRE `.*?"(.*)"` "$1" $animation }}
-{{ $headingClass := ""}}
-{{ if findRE `class=` $heading }}
-{{ $headingClass = replaceRE `.*class="(.*?)".*` "$1" $heading}}
-{{ end }}
-{{ $dataId := ""}}
-{{ if findRE `data-id=` $heading }}
-{{ $dataId = replaceRE `.*data-id="(.*?)".*` "$1" $heading}}
-{{ end }}
-{{ if $isAnimated }}
-<section id="{{ $headingText | urlize }}" class="slide level2" data-auto-animate="true" data-auto-animate-easing="{{ $animation }}">
-{{ else }}
-<section id="{{ $headingText | urlize }}" class="slide level2">
-{{ end }}
-  <h2 class="{{ $headingClass }}" data-id="{{ $dataId }}">{{ $headingText }}</h2>
-  {{/*  {{ $p | string  }}  */}}
-  {{/*  multiline classes  open */}}
-  {{ $p = replaceRE `<p>::{.(.*?)}\s*</p>` "<div class='$1'>" $p }}
-  {{/*  inline classes  */}}
+  {{ $headingId := ""}}
+  {{ with index (findRE `id=".*?"` $p 1) 0 }}
+  {{ $headingId = replaceRE `id="(.*?)"` "$1" .}}
+  {{ end }}
+  {{ $easing:= index (findRE `data-auto-animate-easing=".*?"` $p 1) 0 }}
+  {{ with $easing }}
+  {{ $easing = replaceRE `.*?"(.*?)"` "$1" . }}
+  {{ else }}
+  {{ $easing = "ease-in-out" }}
+  {{ end }}
+  {{ $animate := index (findRE `data-auto-animate=".*?"` $p 1) 0 }}
+  {{ with $animate }}
+  <section id="{{ $headingId }}" data-auto-animate="true" data-auto-animate-easing='{{ $easing }}' class="slide level2">
+  {{ else }}    
+  <section id="{{ $headingId }}" class="slide level2">
+  {{ end }}  
   {{ $p = replaceRE `<p>(.*?){.(.*?)}\s*</p>` "<p class='$2'>$1</p>" $p }}
-  {{/*  multiline classes  close */}}
-  {{ $p = replaceRE `<p>::\s*</p>` "</div>" $p }}
-  {{ print (replaceRE `.*/h2>` "" $p) | safeHTML }}
-</section>
+  {{ print "<h2 " $p | safeHTML  }}
+  </section>
 {{ end}}
 {{ end }}
+
 <section id="any-questions">
   <h2 class="middle">Any questions?</h2>
 </section>

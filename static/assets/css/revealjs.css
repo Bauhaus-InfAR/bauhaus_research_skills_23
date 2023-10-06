@@ -4,6 +4,9 @@
 	text-align: center;
 	margin-top: 300px;
 }
+.reveal div[class] > p {
+	margin: 0;
+}
 .reveal div.sourceCode {
     margin: 0;
     overflow: auto;
@@ -111,8 +114,8 @@
   }
 
 .reveal pre code {
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #333;
 }
 
 .img-caption-container {

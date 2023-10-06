@@ -55,8 +55,11 @@ a.tab-label.active {
 	height: fit-content;
 	background: #0004;
 	border: solid 1px;
-	box-sizing: content-box;
 }
+
+.reveal .tab-content div.sourceCode {
+    box-shadow: 0px -1px 0px 0px white
+  }
 
 /* .tab-content.active::before {
 	content: "Loading...";
