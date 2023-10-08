@@ -1,0 +1,68 @@
+
+
+  {{ define "head_css"}}
+  <link rel="stylesheet" href="/assets/css/docs_list.css">
+  {{ end }}
+  
+  {{ define "body" }}
+<body>
+  {{ block "header" . }}
+  {{ partial "header" . }}
+  {{ end }}
+
+      <main>
+        <div class="container">
+      <h1 id="title">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+      <div id="subtitle">{{ . }}</div>
+      {{ end }}      
+      <div id="description">{{ .Content }}</div>
+          <!-- Ranges through content/docs/*/*.md -->
+          <div class="post-cards">
+              {{ range sort .Pages.ByDate.Reverse }}
+              <div class="post-card-container">
+                  <div class="card">
+                      <a href="{{.Permalink}}"></a>
+                      <div class="pub-date">
+                          <div class="year">{{.Date.Format "2006"}}</div>
+                          <div class="day">{{.Date.Format "02"}}</div>
+                          <div class="month">{{.Date.Format "Jan"}}</div>
+                      </div>
+                      <div class="img-container">
+                          {{ with .Resources.Get "img/bkg.jpg" }}
+                          {{ with .Resize "x250" }}
+                          <img src="{{ .RelPermalink }}" alt="">
+                          {{ end }}
+                          {{ end }}
+                          {{ $readTime := mul (div (countwords .Content) .Site.Params.blogReadSpeed) 60 }}
+                          {{ $minutes := math.Round (div $readTime 60) }}
+                          {{ if lt $minutes 1 }}
+                          {{ $minutes = "< 1" }}
+                          {{ end }}
+                          <div class="read-time">{{ $minutes }} min read</div>
+                      </div>
+                      <h2>{{.Title | safeHTML  | markdownify }}</h2>
+                      {{ with .Params.subtitle | safeHTML  | markdownify  }}<h3>{{ . }}</h3>{{ end }}
+                      <div class="blog-summary">{{ .Summary | truncate 200 }}</div>
+                      <div class="tags">
+                          {{range .Params.tags }}
+                          <a href="/tags/{{.}}/">{{.}}</a>
+                          {{ end }}
+                      </div>
+                  </div>
+              </div>
+              {{ end }}
+          </div>
+          </div>
+      </main>
+  
+  {{ partial "footer" . }}
+  {{ block "footer_js" . }}
+  {{ end }}
+  {{ with .Resources.Get .Params.footer_js }}<script src="{{ . }}" type="text/javascript"></script>{{ end }}
+  {{ block "footer_css" . }}
+  {{ end }}
+  {{ with .Resources.Get .Params.footer_css }}
+  <link rel="stylesheet" href="{{ resources.Get . }}">{{ end }}
+</body>
+{{ end }}

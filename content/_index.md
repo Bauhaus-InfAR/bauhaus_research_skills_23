@@ -2,7 +2,7 @@
 title: Research Skills for IUDD
 ---
 
-The aim of this course is to give you a broad conceptual understanding of how scientific knowledge is developed and to familiarise you with the main methods used in (mainly quantitative) scientific research. The purpose is to equip you with the tools you will need to develop, conduct, and communicate your own research as part of your Masters dissertation.
+The aim of this course is to give you a broad conceptual understanding of how scientific knowledge is developed and to familiarise you with the main methods used in (mainly quantitative) scientific research. The purpose is to equip you with the tools you will need to develop, conduct, and communicate your own research as part of your Masters thesis.
 
 <details id="course-plan-container">
 <summary>More specifically, we will look at the following topics:</summary>

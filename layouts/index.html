@@ -32,6 +32,7 @@
             </section>
             <section id="week-list-section">
                 {{ range sort .Pages "File.Path" }}
+                {{ if in .Type "week" }}
                 <details><summary><h2><span class="week-number">Week {{ replaceRE ".*?0?(\\d+).*" "$1" .File.Dir }}</span>{{ .Title }}</h2></summary>
                 <p>{{ .Content }}</p>
                 <div class="slide-iframe-container">
@@ -39,11 +40,11 @@
                     <a href="{{ .Permalink }}/slides" target="_blank">Open in a new tab</a>
                 </div>
                 </details>
+                {{ end }}                
                 {{ end }}
             </section>
         </div>
     </main>
-</div>
 
     {{ partial "footer" . }}
     {{ block "footer_js" . }}

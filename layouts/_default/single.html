@@ -1,12 +1,57 @@
+{{ define "head_css" }}
+<link rel="stylesheet" href="/assets/css/docs.css">
+{{ end }}
+
 {{ define "body" }}
 <body>
-  {{ block "header" . }}
-  {{ partial "header" . }}
-  {{ end }}
 
-  {{ block "main" . }}
-  <!-- Add Body Here -->
-  {{ end }}
+  <main>
+    <div id="title-container">
+      <h1>{{ .Title }}</h1>
+      <div id="byline">
+        <div>
+          <div class="byline-heading">author</div>
+          <div class="byline-content">{{ with .Page.Params.Author }}{{ . }}{{ else }}{{ .Site.Author.name }}{{ end }}</div>
+        </div>
+        <div>
+          <div class="byline-heading">published</div>
+          <div class="byline-content">{{ .Date.Format "2 January 2006" }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toc-container">
+      <div  id="home"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+      <aside id="toc">
+      <h3 id="toc-title">Contents</h3>
+      <ul id="toc-content">
+      {{ $allHeadings := findRE `<h[23].*?</h.>` .Content }}
+      {{ range $ind, $heading := $allHeadings }}
+        {{/*  test of in {{ in `<h2 id="chicago-manual">Chicago manual</h2>` "h3"}}  */}}
+        {{ $isH2 := in $heading "h2" }}
+        {{ $nextHeading:= index $allHeadings ( add $ind 1 ) }}
+        {{ $isNextH3 := in $nextHeading "</h3>" }}
+        {{ $id := replaceRE `.*id="(.*?)".*` "$1" $heading}}
+        {{ $item := replaceRE `<h.*?>(.*?)</h.>` ( print "<li><a href='./#" $id "'>$1</a>" ) $heading }}
+        {{ $close := "</li>"}}
+        {{/*  h2 and next h3: {{ ( and $isH2 $isNextH3 ) }}  */}}
+        {{ if ( and $isH2 $isNextH3 ) }}
+            {{ $close = "<ul>" }}
+        {{ else if ( and (not $isH2 ) (not  $isNextH3)) }}
+        {{ $close = "</li></ul></li>" }}
+        {{ end }}
+        
+        {{ print $item $close | safeHTML}}
+      {{ end }}
+    </ul>
+    </aside>
+  </div>
+
+    <div id="article-container">
+      
+  {{ .Content }}
+    </div>
+  </main>
 
   {{ partial "footer" . }}
   {{ block "footer_js" . }}
