@@ -36,84 +36,20 @@ wrap <- function(x="", tag="div", class, attr, close=TRUE) {
     return(out)
 }
 
-# make_title <- function(title, include_title=FALSE, font_size) {
-#     paste(
-#         ifelse(include_title,
-#             paste0('<h2 class="hidden" auto-animate="true" data-auto-animate-easing="ease-in-out">', title, '</h2>'),
-#             '<h2 class="hidden" data-auto-animate="true" data-auto-animate-easing="ease-in-out"></h2>'
-#             ),
-#         wrap(title, class="animate-title", attr='data-id="animate-title"'),
-#         wrap(class = "timeline", attr=paste0('style="font-size:', font_size ,'px;"'), close = FALSE),
-#         sep = "\n")
-# }
-
-# make_timeline <- function(
-#     title,
-#     content,
-#     font_size = 25,
-#     show_heading = TRUE,
-#     highlight_last = TRUE) {
-
-#     formatted_content <- list()
-#     for (i in seq_along(content)) {
-
-#         formatted_content[[i]] <- wrap(
-#             wrap(
-#                 lapply(
-#                     seq_along(content[[i]]),
-#                     \(j) {
-#                         x <- content[[i]]
-#                         cls <- names(x)[j]
-#                         if (j == 1) {
-#                             cls <- paste(cls, "item-heading")
-#                         } else if (j == 2) {
-#                             cls <- paste(cls, "item-title")
-#                         }
-#                         wrap(x[j], class = cls)
-#                     }) |> paste(collapse = "\n"),
-#                 class = "timeline-item"
-#             ),
-#             tag = "li",
-#             class = ifelse(highlight_last & i == length(content), "last", ""),
-#             attr = paste0('data-id="p', i, '" data-auto-animate-delay="0.7"')
-#         )
-#     }
-
-#     out <- ""
-#     for (i in seq_along(formatted_content)) {
-#         current_content <- paste(formatted_content[1:i], collapse = "")
-#         current_content <- paste(
-#             current_content,
-#             wrap(
-#                 class = "line",
-#                 attr = paste0('data-id="line" style="grid-row:1/', i+1, ';"')),
-#             wrap(
-#                 class = "dot",
-#                 attr = paste0('data-id="dot" style="grid-row:', i, ';"')),
-#             sep = "\n"
-#             )
-#         out <- paste0(
-#             out,
-#             make_title(title, show_heading & i == 1, font_size),
-#             wrap(
-#                 current_content,
-#                 tag = "ul",
-#                 attr = paste0(
-#                     'style="grid-template-rows:repeat(', i + 1, ', 4em);"'
-#                     )
-#                 ),
-#             "</div>",
-#             sep = "\n")
-#     }
-#     cat("```{=html}", out, "```", sep="\n")
-# }
-
-
-
-
-format_content <- function(content, highlight_last) {
+format_content <- function(content, highlight_last, classes) {
     formatted_content <- list()
     for (i in seq_along(content)) {
+        add_classes <- ""
+        if (!is.null(classes)) {
+            add_classes <- lapply(classes, \(x) i %in% x) |>
+                unlist() |>
+                which() |>
+                names()
+            add_classes <- ifelse(
+                length(add_classes),
+                paste(add_classes, collapse=" "),
+                "")
+        }
         formatted_content[[i]] <- wrap(
             paste(
                 "\n:::{.timeline-item}",
@@ -133,7 +69,10 @@ format_content <- function(content, highlight_last) {
                 sep="\n"
             ),
             tag = "li",
-            class = ifelse(highlight_last & i == length(content), "last", ""),
+            class = ifelse(
+                highlight_last & i == length(content),
+                paste(add_classes, "last"),
+                add_classes),
             attr = paste0('data-id="p', i, '" data-auto-animate-delay="0.7"')
         )
     }
@@ -164,9 +103,10 @@ make_timeline <- function(
     content,
     font_size = 25,
     show_heading = TRUE,
-    highlight_last = TRUE) {
+    highlight_last = TRUE,
+    add_classes = NULL) {
     out <- ""
-    formatted_content <- format_content(content, highlight_last)
+    formatted_content <- format_content(content, highlight_last, add_classes)
     for (i in seq_along(formatted_content)) {
         current_content <- paste(formatted_content[1:i], collapse = "")
         current_content <- paste(

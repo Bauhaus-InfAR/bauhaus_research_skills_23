@@ -24,14 +24,14 @@ The aim of this course is to give you a broad conceptual understanding of how sc
 1. Data
     - Quantitative and qualitative data
     - Levels of measurement
-    - Data collection
+    <!-- - Data collection -->
     - Designing measurement
-1. Analysis AKA Statistics 101
+<!-- 1. Analysis AKA Statistics 101
     - Models of the world
     - Descriptive statistics (location/spread)
 	- Probability distributions
 	- Correlation?
-	- Statistical tests of hypotheses
+	- Statistical tests of hypotheses -->
 1. Academic writing
     - Structure of an academic paper
     - Literature search strategies
@@ -39,5 +39,5 @@ The aim of this course is to give you a broad conceptual understanding of how sc
 </div>
 </details>
 
-During the course of this semester, you will also gain hands-on experience with formulating research questions and hypotheses, designing a study, collecting and analysing data, and reporting results.
+During the course of this semester, you will also gain hands-on experience with formulating research questions and hypotheses, designing a study, and writing the first half of a research report.
 

@@ -1,6 +1,6 @@
 ---
 title: Introduction to Research Skills
-date: "2023-10-08"
+date: "2023-10-10"
 format: markdown
 type: revealjs
 execute:
@@ -19,10 +19,6 @@ prefer-html: true
 - Assessment
 - Course timeline
 :::
-
-<!-- ## chrom
-
-![Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis\ &\ Prakash, Science, 215:1525, 1982](../assets/humanChimpChromosomes.png){.frame .rot height=500 source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/"} -->
 
 ## Ground rules
 
@@ -57,7 +53,13 @@ Belvederer Allee 1
 :::
 :::
 
+\ 
 
+\ 
+
+Email me to arrange a consultation session
+
+<!-- My professional timeline -->
 ```{r}
 #| results: 'asis'
 #| echo: false
@@ -66,7 +68,7 @@ cv = list(
     list(
         when="2005-2010",
         what="Mgr (MSc) Psychology",
-        where="Komenius University, Bratislava"
+        where="Comenius University, Bratislava"
     ),
     list(
         when="2011-2015",
@@ -131,35 +133,40 @@ By the end of this course you will:
 - understand the difference in **qualitative** and **quantitative** approaches to research and their respective merits
 - appreciate the value of **theory** and its relationship with **research questions** and **hypotheses**
 - understand the role of **measurement** in science
-- know the principle of **hypothesis testing**
-- learn how the world can be described with **statistics**
-- able to **critically evaluate** published literature
-- able to **conduct and write about your own research**
+- able to **review** and **critically evaluate** published literature
+- know when and how to **reference sources**
+- **write the Introduction and Methods sections** of your own research project
 :::
 
 ## Curriculum
 
 ```{r}
 #| echo: false
+#| classes: smaller
 
-curr <- data.frame(Week = 1:13, Topic = c(
+curr <- data.frame(
+    Week = c(1:10, "","", 11:13),
+    Date = (as.Date("2023-10-10") + c(1:15 * 7)) |> format("%d/%m/%y"),
+    Topic = c(
     "Intro to philosophy of science",
-    "Research question, hypothesis, theory",
+    "Literature search and citing sources",
     "Public holiday :tada::tada::tada:",
-    "Qualitative and Quantitative methods",
-    "Study design",
+    "Research question, hypothesis, theory",
+    "Qualitative methods",
+    "Quantitative methods",
+    "Writing Introduction",
+    "From research question to testable hypotheses",
     "Data and levels of measurement",
-    "Designing measures",
-    "Collecting data",
-    "Descriptive statistics",
-    "Basic data visualisation",
-    "Probability distributions",
-    "Statistical testing & correlation",
-    "Writing an academic paper/report"
+    "Measuring things",
+    "Winter break",
+    ":snowman: :snowflake: :scarf:",
+    "Questionnaires",
+    "Writing the Methods section",
+    "Recap Q&A"
 ))
 
 curr |>
-    kableExtra:::kbl(align = "cl", escape = FALSE) |>
+    kableExtra:::kbl(align = "ccl", escape = FALSE) |>
     kableExtra:::kable_styling(full_width = T)
 ```
 
@@ -174,7 +181,25 @@ curr |>
 
 ### 40% end of term assignment
 
-- Well-written and -formatted report on your mini-project
+- Well-written and -formatted report on your mini-project (Introduction and Methods sections)
+
+## Assignment
+
+:::{.tight}
+- Pick a research project you're interested in
+- Develop the idea over the course of the semester
+    - Research question
+    - Literature review
+    - Hypothesis/hypotheses
+    - Methodoloty of testing hypothesis/-es
+- Discuss ideas in class
+- Interim submission
+    - Introduction (**max** 1,200 words)
+    - **Deadline 12 December**
+- Final submission
+    - Intro & Methods (**max** 2,100 words)
+    - **Deadline 5 February**
+:::
 
 <!-- Assignment roadmap -->
 
@@ -192,28 +217,30 @@ timeline = list(
         what="Research question"
     ),
     list(
-        when="Week 5",
+        when="Week 6",
         what="Hypothesis/-es"
     ),
     list(
-        when="Week 7",
-        what="Methodology"
+        when="Week 9",
+        what="Introduction"
     ),
     list(
-        when="Week 10",
-        what="Data collection"
+        when="12 December",
+        what="Submission checkpoint",
+        how="Introduction (max. 1,200 words)"
     ),
     list(
         when="Week 12",
-        what="Data analysis"
+        what="Methodology"
     ),
     list(
-        when="January 2024",
-        what="Project submission"
+        when="5 February 2024",
+        what="Report submission",
+        how="Introduction & Methods (max. 2,100 words)"
     )
 )
 
-make_timeline("Assignment roadmap", timeline, font_size = 21)
+make_timeline("Assignment roadmap", timeline, add_classes = list("checkpoint" = c(5, 7)), font_size = 21)
 ```
 
 ## Course resources

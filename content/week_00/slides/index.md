@@ -1,5 +1,5 @@
 ---
-date: 2023-10-08
+date: 2023-10-10
 execute:
   echo: true
 header-includes:
@@ -26,11 +26,6 @@ type: revealjs
 -   Course timeline
 :::
 
-```{=html}
-<!-- ## chrom
-
-![Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis\ &\ Prakash, Science, 215:1525, 1982](../assets/humanChimpChromosomes.png){.frame .rot height=500 source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/"} -->
-```
 ## Ground rules
 
 -   Be kind and respectful
@@ -65,6 +60,15 @@ Belvederer Allee 1
 :::
 :::
 
+ 
+
+ 
+
+Email me to arrange a consultation session
+
+```{=html}
+<!-- My professional timeline -->
+```
 ##  {#section .hidden auto-animate="true"}
 
 ::: {.animate-title data-id="animate-title"}
@@ -88,7 +92,7 @@ Mgr (MSc) Psychology
 :::
 
 ::: where
-Komenius University, Bratislava
+Comenius University, Bratislava
 :::
 :::
 
@@ -129,7 +133,7 @@ Mgr (MSc) Psychology
 :::
 
 ::: where
-Komenius University, Bratislava
+Comenius University, Bratislava
 :::
 :::
 
@@ -190,7 +194,7 @@ Mgr (MSc) Psychology
 :::
 
 ::: where
-Komenius University, Bratislava
+Comenius University, Bratislava
 :::
 :::
 
@@ -271,7 +275,7 @@ Mgr (MSc) Psychology
 :::
 
 ::: where
-Komenius University, Bratislava
+Comenius University, Bratislava
 :::
 :::
 
@@ -372,7 +376,7 @@ Mgr (MSc) Psychology
 :::
 
 ::: where
-Komenius University, Bratislava
+Comenius University, Bratislava
 :::
 :::
 
@@ -493,7 +497,7 @@ Mgr (MSc) Psychology
 :::
 
 ::: where
-Komenius University, Bratislava
+Comenius University, Bratislava
 :::
 :::
 
@@ -581,7 +585,7 @@ University of Sussex
 </li>
 ```
 ```{=html}
-<li class="last" data-id="p6" data-auto-animate-delay="0.7">
+<li class=" last" data-id="p6" data-auto-animate-delay="0.7">
 ```
 ::: timeline-item
 ::: {.when .item-heading}
@@ -648,31 +652,33 @@ By the end of this course you will:
 -   appreciate the value of **theory** and its relationship with
     **research questions** and **hypotheses**
 -   understand the role of **measurement** in science
--   know the principle of **hypothesis testing**
--   learn how the world can be described with **statistics**
--   able to **critically evaluate** published literature
--   able to **conduct and write about your own research**
+-   able to **review** and **critically evaluate** published literature
+-   know when and how to **reference sources**
+-   **write the Introduction and Methods sections** of your own research
+    project
 :::
 
 ## Curriculum
 
-::: cell
+::: {.cell .smaller}
 ::: cell-output-display
-   Week  Topic
-  ------ ---------------------------------------
-    1    Intro to philosophy of science
-    2    Research question, hypothesis, theory
-    3    Public holiday :tada::tada::tada:
-    4    Qualitative and Quantitative methods
-    5    Study design
-    6    Data and levels of measurement
-    7    Designing measures
-    8    Collecting data
-    9    Descriptive statistics
-    10   Basic data visualisation
-    11   Probability distributions
-    12   Statistical testing & correlation
-    13   Writing an academic paper/report
+   Week     Date    Topic
+  ------ ---------- -----------------------------------------------
+    1     17/10/23  Intro to philosophy of science
+    2     24/10/23  Literature search and citing sources
+    3     31/10/23  Public holiday :tada::tada::tada:
+    4     07/11/23  Research question, hypothesis, theory
+    5     14/11/23  Qualitative methods
+    6     21/11/23  Quantitative methods
+    7     28/11/23  Writing Introduction
+    8     05/12/23  From research question to testable hypotheses
+    9     12/12/23  Data and levels of measurement
+    10    19/12/23  Measuring things
+          26/12/23  Winter break
+          02/01/24  :snowman: :snowflake: :scarf:
+    11    09/01/24  Questionnaires
+    12    16/01/24  Writing the Methods section
+    13    23/01/24  Recap Q&A
 
 ```{=html}
 
@@ -692,6 +698,25 @@ By the end of this course you will:
 ### 40% end of term assignment
 
 -   Well-written and -formatted report on your mini-project
+    (Introduction and Methods sections)
+
+## Assignment
+
+::: tight
+-   Pick a research project you're interested in
+-   Develop the idea over the course of the semester
+    -   Research question
+    -   Literature review
+    -   Hypothesis/hypotheses
+    -   Methodoloty of testing hypothesis/-es
+-   Discuss ideas in class
+-   Interim submission
+    -   Introduction (**max** 1,200 words)
+    -   **Deadline 12 December**
+-   Final submission
+    -   Intro & Methods (**max** 2,100 words)
+    -   **Deadline 5 February**
+:::
 
 ```{=html}
 <!-- Assignment roadmap -->
@@ -833,7 +858,7 @@ Research question
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 5
+Week 6
 :::
 
 ::: {.what .item-title}
@@ -902,7 +927,7 @@ Research question
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 5
+Week 6
 :::
 
 ::: {.what .item-title}
@@ -918,11 +943,11 @@ Hypothesis/-es
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 7
+Week 9
 :::
 
 ::: {.what .item-title}
-Methodology
+Introduction
 :::
 :::
 
@@ -987,7 +1012,7 @@ Research question
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 5
+Week 6
 :::
 
 ::: {.what .item-title}
@@ -1003,11 +1028,11 @@ Hypothesis/-es
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 7
+Week 9
 :::
 
 ::: {.what .item-title}
-Methodology
+Introduction
 :::
 :::
 
@@ -1015,15 +1040,19 @@ Methodology
 </li>
 ```
 ```{=html}
-<li class data-id="p5" data-auto-animate-delay="0.7">
+<li class="checkpoint" data-id="p5" data-auto-animate-delay="0.7">
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 10
+12 December
 :::
 
 ::: {.what .item-title}
-Data collection
+Submission checkpoint
+:::
+
+::: how
+Introduction (max. 1,200 words)
 :::
 :::
 
@@ -1088,7 +1117,7 @@ Research question
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 5
+Week 6
 :::
 
 ::: {.what .item-title}
@@ -1104,11 +1133,11 @@ Hypothesis/-es
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 7
+Week 9
 :::
 
 ::: {.what .item-title}
-Methodology
+Introduction
 :::
 :::
 
@@ -1116,15 +1145,19 @@ Methodology
 </li>
 ```
 ```{=html}
-<li class data-id="p5" data-auto-animate-delay="0.7">
+<li class="checkpoint" data-id="p5" data-auto-animate-delay="0.7">
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 10
+12 December
 :::
 
 ::: {.what .item-title}
-Data collection
+Submission checkpoint
+:::
+
+::: how
+Introduction (max. 1,200 words)
 :::
 :::
 
@@ -1140,7 +1173,7 @@ Week 12
 :::
 
 ::: {.what .item-title}
-Data analysis
+Methodology
 :::
 :::
 
@@ -1205,7 +1238,7 @@ Research question
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 5
+Week 6
 :::
 
 ::: {.what .item-title}
@@ -1221,11 +1254,11 @@ Hypothesis/-es
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 7
+Week 9
 :::
 
 ::: {.what .item-title}
-Methodology
+Introduction
 :::
 :::
 
@@ -1233,15 +1266,19 @@ Methodology
 </li>
 ```
 ```{=html}
-<li class data-id="p5" data-auto-animate-delay="0.7">
+<li class="checkpoint" data-id="p5" data-auto-animate-delay="0.7">
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-Week 10
+12 December
 :::
 
 ::: {.what .item-title}
-Data collection
+Submission checkpoint
+:::
+
+::: how
+Introduction (max. 1,200 words)
 :::
 :::
 
@@ -1257,7 +1294,7 @@ Week 12
 :::
 
 ::: {.what .item-title}
-Data analysis
+Methodology
 :::
 :::
 
@@ -1265,15 +1302,19 @@ Data analysis
 </li>
 ```
 ```{=html}
-<li class="last" data-id="p7" data-auto-animate-delay="0.7">
+<li class="checkpoint last" data-id="p7" data-auto-animate-delay="0.7">
 ```
 ::: timeline-item
 ::: {.when .item-heading}
-January 2024
+5 February 2024
 :::
 
 ::: {.what .item-title}
-Project submission
+Report submission
+:::
+
+::: how
+Introduction & Methods (max. 2,100 words)
 :::
 :::
 

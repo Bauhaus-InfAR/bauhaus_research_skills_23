@@ -1,7 +1,7 @@
 ---
 title: Introduction to Research Skills
 date: "2023-10-08"
-format: hugo-md
+format: markdown
 type: revealjs
 execute:
   echo: true
@@ -12,14 +12,12 @@ draft: true
 ## Heading
 
 <!-- these fences CANNOT be nested -->
-::{.incremental}
-
+:::{.incremental}
 - something
 - another thing
 
 not a bullet point but still incremental
-
-::
+:::
 
 
 ## Image captions
@@ -28,7 +26,23 @@ not a bullet point but still incremental
 - `.rot` class slightly rotates image and caption
 - `source=` attribute adds link to source in caption
 
-![Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis+&+Prakash, Science, 215:1525, 1982](../humanChimpChromosomes.png){.frame .rot height=500 source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/"} -->
+## chrom
+
+![Human chromosome 2 and analogous chimp chromosomes, adapted from Yunis\ &\ Prakash, Science, 215:1525, 1982](../assets/humanChimpChromosomes.png){.frame .rot height=500 source="http://book.bionumbers.org/how-many-chromosomes-are-found-in-different-organisms/"}
+
+## bible
+
+:::{.times .incremental}
+:::{.rtl}
+בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָֽרֶץ׃
+:::
+ἐν ἀρχῇ ἐποίησεν ὁ θεὸς τὸν οὐρανὸν καὶ τὴν γῆν
+:::
+
+## dancer
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/21/Spinning_Dancer.gif)
+
 
 
 <!-- The below produces an animated timeline of CV -->
