@@ -21,22 +21,27 @@
     toWrap.parentNode.insertBefore(wrapper, toWrap);
     return wrapper.appendChild(toWrap);
   };
-  document.querySelectorAll(".incremental li, .incremental > :not(ul)").forEach(el => el.classList.add("fragment"));
+  document.querySelectorAll(".incremental li, .incremental > :not(ul):not(ol):not(.columns):not(.column), .non-incremental").forEach(el => el.classList.add("fragment"));
+  document.querySelectorAll(".non-incremental *").forEach(el => el.classList.remove("fragment"));
   document.querySelectorAll('img[data-source]').forEach(img => {
-    caption = img.nextElementSibling;
-    if (caption.tagName !== "FIGCAPTION") return
+    caption = img.nextElementSibling || document.createElement("FIGCAPTION");
+    const append = caption.innerText === ""
+    const source = append ? "<a href=" + img.dataset.source + ">source</a>" : " (<a href=" + img.dataset.source + ">source</a>)"
+    {{/*  if (!caption) return
+    if (caption.tagName !== "FIGCAPTION") return  */}}
     caption.classList.add("img-caption");
-    if (img.hasAttribute("data-source")) caption.innerHTML = caption.innerHTML + " (<a href=" + img.dataset.source + ">source</a>)"
+    if (img.hasAttribute("data-source")) caption.innerHTML = caption.innerHTML + source
     const classesToAdd = ["img-caption-container"];
     if (img.classList.contains("rot")) caption.classList.add("rot");
-    img.parentElement.classList.add(...classesToAdd)
+    img.parentElement.classList.add(...classesToAdd);
+    if (append) img.parentElement.appendChild(caption)
   });
   let previousRotation =  Math.round(Math.random() * 100 - 50) / 10
-  document.querySelectorAll(".rot").forEach(el => {
-    rotation = el.previousElementSibling?.classList.contains("rot") ? -previousRotation * Math.random() * 1.5  : Math.round(Math.random() * 100 - 50) / 10;
-    el.style.transform =  el.tagName === "IMG" ? "rotateZ(" + rotation + "deg)": "translateX(" + Math.round(Math.random() * 40 - 20) + "%) rotateZ(" + rotation + "deg)";
+  document.querySelectorAll(".rot, *[data-rot]").forEach(el => {
+    rotation = +el.dataset.rot || (el.previousElementSibling?.classList.contains("rot") ? -previousRotation * Math.random() * 1.5  : Math.round(Math.random() * 100 - 50) / 10);
+    el.style.transform =  el.tagName === "FIGCAPTION" ? "translateX(" + Math.round(Math.random() * 40 - 20) + "%) rotateZ(" + rotation + "deg)" : "rotateZ(" + rotation + "deg)";
     previousRotation = rotation
-  })
+  });
   if (window.location !== window.parent.location) document.getElementById("home").remove();
 </script>
 <script>
@@ -413,5 +418,18 @@
         });
       }
     }
+  });
+  // remove duplicate headings in menu
+  const menuItems = document.querySelectorAll(".slide-menu-item")
+  for (let i = menuItems.length - 1; i > 0; i--) {
+    if (menuItems[i].innerText === menuItems[i-1].innerText) menuItems[i].remove()
+  }
+  // add background styles and source
+  document.querySelectorAll("section.slide").forEach((e, i) => {
+    const filter = e.dataset.filter;
+    const bkgSource = e.dataset.source;
+    const bkg = document.querySelectorAll(".slide-background-content")[i+1];
+    if (filter) bkg.style.filter = filter;
+    if (bkgSource) bkg.parentElement.append(e.querySelector("a.bkg-source"))
   });
   </script>

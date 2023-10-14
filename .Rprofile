@@ -65,8 +65,8 @@ format_content <- function(content, highlight_last, classes) {
                         }
                         wrap(x[j], class = cls)
                     }) |> paste(collapse = "\n"),
-                ":::\n", 
-                sep="\n"
+                ":::\n",
+                sep = "\n"
             ),
             tag = "li",
             class = ifelse(
@@ -79,14 +79,11 @@ format_content <- function(content, highlight_last, classes) {
     formatted_content
 }
 
-make_title <- function(title, include_title=FALSE, font_size) {
+make_title <- function(title, font_size) {
     paste(
-        paste("##", ifelse(include_title, title, ""), "{.hidden auto-animate=true}"),
-        ':::{.animate-title data-id="animate-title"}',
-        title,
-        ':::',
+        paste("##", title, "{auto-animate=true}"),
         paste0(':::{.timeline style="font-size:', font_size, 'px"}'),
-        sep="\n"
+        sep = "\n"
     )
 }
 
@@ -118,7 +115,7 @@ make_timeline <- function(
             )
         out <- paste(
             out,            
-            make_title(title, show_heading & i == 1, font_size),
+            make_title(title, font_size),
             wrap(
                 current_content,
                 tag = "ul",

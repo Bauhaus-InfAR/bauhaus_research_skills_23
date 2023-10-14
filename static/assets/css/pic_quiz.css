@@ -1,0 +1,54 @@
+#pic-quiz {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+#pic-quiz img {
+	max-height: 290px;
+	object-fit: cover;
+}
+
+#pic-quiz p {
+	position: relative;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	transition: all .3s ease-in;
+}
+
+#pic-quiz p:hover {
+	transform: scale(1.15);
+	z-index: 2;
+}
+
+#pic-quiz p::before {
+	content: attr(lab);
+	z-index: 100;
+	position: absolute;
+	color: #222;
+	font-size: 1em;
+	font-weight: 400;
+	background: white;
+	padding: 1px 5px;
+	box-shadow: 5px 5px 10px 0 #333;
+	top: 0;
+	left: 0;
+}
+
+.correct-label {
+	position: absolute;
+	font-weight: 400;
+	color: var(--r-link-color-hover);
+	border: solid 2px;
+	background: white;
+	padding: 3px 6px;
+}
+
+#pic-quiz .img-caption {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 0.6em;
+	padding: 1px 5px;
+}

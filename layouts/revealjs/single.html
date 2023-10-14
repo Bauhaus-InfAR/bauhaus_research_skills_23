@@ -1,5 +1,15 @@
 {{ define "custom_head" }}
 {{ partial "reveal_head" . }}
+{{ with .Params.includes.css }}
+  {{ $type := printf "%T" . }}
+  {{ if eq $type "[]interface {}" }}
+    {{ range . }}
+      <link rel="stylesheet" href="{{ . }}">
+    {{ end }}
+  {{ else }}
+    <link rel="stylesheet" href="{{ . }}">
+  {{ end }}
+{{ end }}
 {{ end }}
 
 {{ define "body" }}
@@ -11,39 +21,41 @@
 <div class="reveal">
 <div class="slides">
 
-  
 <section id="title-slide" class="center">
   <div id="title-container">
   <p class="week">{{ .Params.subtitle }}</p>
   <h1 class="title">{{ .Title }}</h1>
-  <p class="subtitle">IUDD Research Skills</p>
-  <p class="date">{{ .Date.Format "2 January 2006" }}</p>
-  <p class="author">{{ with .Page.Params.Author }}{{ . }}{{ else }}{{print "Dr " .Site.Author.name }}{{ end }}</p>
-  <p class="institute">Bauhaus-University Weimar</p>
+  <div id="details-container">
+    <div id="qrcode-container">
+      <div id="qrcode"></div>
+    </div>
+    <div>
+      <p class="subtitle">IUDD Research Skills</p>
+      <p class="date">{{ .Date.Format "2 January 2006" }}</p>
+      <p class="author">{{ with .Page.Params.Author }}{{ . }}{{ else }}{{print "Dr " .Site.Author.name }}{{ end }}</p>
+      <p class="institute">Bauhaus-University Weimar</p>
+    </div>
+  </div>
   </div>
   </section>
-{{ $paragraphs := split .Content "<h2 " }}
+{{ $paragraphs := split .Content `<h2` }}
 {{ range $index, $p := $paragraphs }}
 {{ if eq $index 0}}
 {{ else }}
-  {{ $headingId := ""}}
-  {{ with index (findRE `id=".*?"` $p 1) 0 }}
-  {{ $headingId = replaceRE `id="(.*?)"` "$1" .}}
-  {{ end }}
-  {{ $easing:= index (findRE `data-auto-animate-easing=".*?"` $p 1) 0 }}
-  {{ with $easing }}
-  {{ $easing = replaceRE `.*?"(.*?)"` "$1" . }}
+  {{ $section := index (findRE `(?s:(.*?)>)` . 1) 0 }}
+  {{ if in $section "class=" }}
+    {{ $section = replaceRE `class="(.*?)"` `class="slide level2 $1"` $section}}
   {{ else }}
-  {{ $easing = "ease-in-out" }}
+    {{ $section = replaceRE `>` `class="slide level2" >` $section}}
   {{ end }}
-  {{ $animate := index (findRE `data-auto-animate=".*?"` $p 1) 0 }}
-  {{ with $animate }}
-  <section id="{{ $headingId }}" data-auto-animate="true" data-auto-animate-easing='{{ $easing }}' class="slide level2">
-  {{ else }}    
-  <section id="{{ $headingId }}" class="slide level2">
-  {{ end }}  
+  {{ $section = print "<section" $section }}
+  {{ $section | safeHTML }}
   {{ $p = replaceRE `<p>(.*?){.(.*?)}\s*</p>` "<p class='$2'>$1</p>" $p }}
-  {{ print "<h2 " $p | safeHTML  }}
+  {{ print "<h2" $p | safeHTML  }}
+  {{ with index ( findRE `(?s:source="(.*?)")` $section 1 ) 0 }}
+  {{ $source := replaceRE `source="(.*?)"` "$1" . }}
+    <a class="bkg-source" href="{{ $source }}" >Image source</a>
+  {{ end }}
   </section>
 {{ end}}
 {{ end }}
@@ -59,5 +71,26 @@
 {{ end }}
 
 {{ define "foot" }}
+
+{{ with .Params.includes.js }}
+  {{ $type := printf "%T" . }}
+  {{ if eq $type "[]interface {}" }}
+    {{ range . }}
+      <script src="{{ . }}"></script>
+    {{ end }}
+  {{ else }}
+    <script src="{{ . }}"></script>
+  {{ end }}
+{{ end }}
+<script type="text/javascript">
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+    text: "{{ .Permalink }}",
+    width: 180,
+    height: 180,
+    colorDark : "#ffffff",
+    colorLight : "#1860ac",
+    correctLevel : QRCode.CorrectLevel.H
+  });
+</script>
 {{ partial "reveal_foot" . }}
 {{ end }}
