@@ -41,3 +41,4 @@ The aim of this course is to give you a broad conceptual understanding of how sc
 
 During the course of this semester, you will also gain hands-on experience with formulating research questions and hypotheses, designing a study, and writing the first half of a research report.
 
+<a href="https://miro.com/app/board/uXjVNfgkf3I=/" target="_blank" style="font-size:1.3em;font-weight:400;">Miro board</a>

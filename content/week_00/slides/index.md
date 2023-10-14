@@ -69,11 +69,7 @@ Email me to arrange a consultation session
 ```{=html}
 <!-- My professional timeline -->
 ```
-##  {#section .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Who am I?
-:::
+## Who am I? {#who-am-i-1 auto-animate="true"}
 
 ::: {.timeline style="font-size:25px"}
 ```{=html}
@@ -110,11 +106,7 @@ Comenius University, Bratislava
 ```
 :::
 
-##  {#section-1 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Who am I?
-:::
+## Who am I? {#who-am-i-2 auto-animate="true"}
 
 ::: {.timeline style="font-size:25px"}
 ```{=html}
@@ -171,11 +163,7 @@ University of Edinburgh
 ```
 :::
 
-##  {#section-2 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Who am I?
-:::
+## Who am I? {#who-am-i-3 auto-animate="true"}
 
 ::: {.timeline style="font-size:25px"}
 ```{=html}
@@ -252,11 +240,7 @@ Royal College of Surgeons of Edinburgh
 ```
 :::
 
-##  {#section-3 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Who am I?
-:::
+## Who am I? {#who-am-i-4 auto-animate="true"}
 
 ::: {.timeline style="font-size:25px"}
 ```{=html}
@@ -353,11 +337,7 @@ University of Edinburgh
 ```
 :::
 
-##  {#section-4 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Who am I?
-:::
+## Who am I? {#who-am-i-5 auto-animate="true"}
 
 ::: {.timeline style="font-size:25px"}
 ```{=html}
@@ -474,11 +454,7 @@ University of Sussex
 ```
 :::
 
-##  {#section-5 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Who am I?
-:::
+## Who am I? {#who-am-i-6 auto-animate="true"}
 
 ::: {.timeline style="font-size:25px"}
 ```{=html}
@@ -721,11 +697,7 @@ By the end of this course you will:
 ```{=html}
 <!-- Assignment roadmap -->
 ```
-## Assignment roadmap {#assignment-roadmap .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Assignment roadmap
-:::
+## Assignment roadmap {#assignment-roadmap auto-animate="true"}
 
 ::: {.timeline style="font-size:21px"}
 ```{=html}
@@ -758,11 +730,7 @@ Research topic
 ```
 :::
 
-##  {#section-6 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Assignment roadmap
-:::
+## Assignment roadmap {#assignment-roadmap-1 auto-animate="true"}
 
 ::: {.timeline style="font-size:21px"}
 ```{=html}
@@ -811,11 +779,7 @@ Research question
 ```
 :::
 
-##  {#section-7 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Assignment roadmap
-:::
+## Assignment roadmap {#assignment-roadmap-2 auto-animate="true"}
 
 ::: {.timeline style="font-size:21px"}
 ```{=html}
@@ -880,11 +844,7 @@ Hypothesis/-es
 ```
 :::
 
-##  {#section-8 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Assignment roadmap
-:::
+## Assignment roadmap {#assignment-roadmap-3 auto-animate="true"}
 
 ::: {.timeline style="font-size:21px"}
 ```{=html}
@@ -965,11 +925,7 @@ Introduction
 ```
 :::
 
-##  {#section-9 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Assignment roadmap
-:::
+## Assignment roadmap {#assignment-roadmap-4 auto-animate="true"}
 
 ::: {.timeline style="font-size:21px"}
 ```{=html}
@@ -1070,11 +1026,7 @@ Introduction (max. 1,200 words)
 ```
 :::
 
-##  {#section-10 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Assignment roadmap
-:::
+## Assignment roadmap {#assignment-roadmap-5 auto-animate="true"}
 
 ::: {.timeline style="font-size:21px"}
 ```{=html}
@@ -1191,11 +1143,7 @@ Methodology
 ```
 :::
 
-##  {#section-11 .hidden auto-animate="true"}
-
-::: {.animate-title data-id="animate-title"}
-Assignment roadmap
-:::
+## Assignment roadmap {#assignment-roadmap-6 auto-animate="true"}
 
 ::: {.timeline style="font-size:21px"}
 ```{=html}
@@ -1347,12 +1295,8 @@ Introduction & Methods (max. 2,100 words)
 
 ## Miro board
 
-```{=html}
-<iframe width="100%" height="550px" src="https://miro.com/app/live-embed/uXjVNfgkf3I=/?moveToViewport=-893,-1963,11018,5741&amp;embedId=740713753465" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen>
-```
-```{=html}
-</iframe>
-```
+{{< miro >}}
+
 ## The deal
 
 ::: {.columns .tight}
