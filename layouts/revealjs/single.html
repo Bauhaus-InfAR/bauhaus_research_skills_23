@@ -84,7 +84,7 @@
 {{ end }}
 <script type="text/javascript">
   var qrcode = new QRCode(document.getElementById("qrcode"), {
-    text: "{{ .Permalink }}",
+    text: "{{ print .Site.Params.hostedOn .Permalink }}",
     width: 180,
     height: 180,
     colorDark : "#ffffff",
