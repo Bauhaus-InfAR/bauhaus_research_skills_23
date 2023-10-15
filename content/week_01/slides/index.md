@@ -227,6 +227,7 @@ only wear black
 ### Theory
 
 -   In colloquial sense: a hunch, a guess
+-   In the scientific sense: and overarching conceptual framework
 -   Conceptual framework that **describes**, **explains**, and
     **predicts** observations
 
@@ -400,7 +401,10 @@ source="https://www.iac.es/en/outreach/news/new-measurements-solar-spectrum-veri
         traditions](https://hssonline.org/page/teaching_nonwestern)
     -   [Feminist perspectives on
         science](https://plato.stanford.edu/entries/feminist-science/)
-    -   Structural and systemic issues with academia
-    -   Historical issues whose effects we can still feel
+    -   [Structural and systemic issues with
+        academia](https://www.youtube.com/watch?v=cqII5wZn8AQ)
+    -   [Historical
+        issues](https://carolinecriadoperez.com/book/invisible-women/)
+        whose effects we can still feel
 -   I encourage you to explore these
 -   Despite these I think science is cool and I hope now you agree
