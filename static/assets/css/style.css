@@ -311,8 +311,7 @@ iframe {
 .slide-iframe-container {
 	text-align: end;
     width: min(549px, 100%);
-    margin-inline: auto;
-	margin-bottom: 2em;
+	margin: 2em auto;
 	font-size: .8em;
 }
 
@@ -352,6 +351,22 @@ iframe.viz, iframe.slides {
 	align-items: center;
 	justify-content: center;
 }
+
+.homework {
+	background: #c80f0f;
+	color: white;
+	padding: 5px 1em;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	font-weight: 400;
+}
+
+.homework h2 {
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+
 
 @media (max-width: 750px) {
 	body {

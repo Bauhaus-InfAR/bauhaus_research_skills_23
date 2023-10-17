@@ -408,3 +408,10 @@ source="https://www.iac.es/en/outreach/news/new-measurements-solar-spectrum-veri
         whose effects we can still feel
 -   I encourage you to explore these
 -   Despite these I think science is cool and I hope now you agree
+
+## Homework
+
+**By next week**, come up with a broad(ish) topic/area that you would
+like to conduct research in.
+
+We will discuss your ideas in class.
