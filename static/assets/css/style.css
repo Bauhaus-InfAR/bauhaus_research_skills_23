@@ -380,6 +380,11 @@ iframe.viz, iframe.slides {
 	font-weight: 600;
 }
 
+.homework a {
+    color: #000000c7;
+    font-weight: 600;
+    border-bottom-color: #000000c7;
+}
 
 .reference p {
 	text-indent: -2em;
