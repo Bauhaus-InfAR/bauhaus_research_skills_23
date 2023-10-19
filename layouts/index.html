@@ -36,7 +36,7 @@
                 <details><summary><h2><span class="week-number">Week {{ replaceRE ".*?0?(\\d+).*" "$1" .File.Dir }}</span>{{ .Title }}</h2></summary>
                 <p>{{ .Content }}</p>
                 <div class="slide-iframe-container">
-                    <iframe class="slides" src="{{ .Permalink }}/slides"></iframe>
+                    <iframe class="slides" src="about:blank" data-source="{{ .Permalink }}/slides"></iframe>
                     <a href="{{ .Permalink }}/slides" target="_blank">Open in a new tab</a>
                 </div>
                 </details>
@@ -54,5 +54,17 @@
     {{ end }}
     {{ with .Resources.Get .Params.footer_css }}
     <link rel="stylesheet" href="{{ resources.Get . }}">{{ end }}
+    <script>
+        // load/unload iframes when Week section is toggled
+        document.querySelectorAll("#week-list-section summary").forEach(
+            el => el.addEventListener("click", e => {
+                const details = e.target.closest("details")
+                const ifr = details.querySelector(".slide-iframe-container iframe")
+                source = details.open ? "about:blank" : ifr.dataset.source
+                ifr.src = source
+            },
+            {"once": true})) // maybe just load once?
+
+    </script>
 </body>
 {{ end }}
