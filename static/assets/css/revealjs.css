@@ -251,6 +251,10 @@ html:fullscreen #home {
   top:35px
 } */
 
+.timeline-item p {
+  margin: 0;
+}
+
 .reveal .slide .timeline .line {
   height: calc(100% - 3.6em);
   width: .3em;
