@@ -402,3 +402,24 @@ iframe.viz, iframe.slides {
 		flex-direction: row;
 	}
 }
+
+/* #loading {
+	letter-spacing: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#loading span {
+	animation: popout 2s ease-in infinite;
+	animation-fill-mode: none;
+}
+
+@keyframes popout {
+	0%, 50% {
+		scale: 1;
+	}
+	25% {
+		scale: 2;
+	}
+} */

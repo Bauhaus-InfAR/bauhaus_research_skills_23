@@ -415,9 +415,48 @@ tbody tr:nth-child(2n-1) {
   height: 100%;
 }
 
+.reveal .reference p {
+	margin-left: 2em;
+}
 
 @media all and (display-mode: fullscreen) {
   #qrcode {
     display: block;
   }
 }
+
+/* 
+.arrow {
+	height: 100px;
+	width: 100px;
+	background: transparent;
+	border: solid 12px white;
+	border-radius: 50%;
+	position: relative;
+  animation: rotate 2s ease-in-out infinite
+}
+.arrow::after, .arrow::before {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 0;
+	width: 0;
+	border: solid 18px;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	transform: translate(25px, -22px);
+}
+.arrow::before {
+	border-left: solid 15px var(--r-background-color);
+	transform: translate(35px, -22px);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

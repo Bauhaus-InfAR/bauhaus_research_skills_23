@@ -43,6 +43,7 @@
                 {{ end }}                
                 {{ end }}
             </section>
+            {{/*  <div id="loading"></div>  */}}
         </div>
     </main>
 
@@ -55,6 +56,9 @@
     {{ with .Resources.Get .Params.footer_css }}
     <link rel="stylesheet" href="{{ resources.Get . }}">{{ end }}
     <script>
+        /*  "Loading...".split("").forEach((e, i) => {
+        const div = document.getElementById("loading")
+        div.innerHTML = div.innerHTML + ("<span style='animation-delay:0." + i + "s;'>" + e + "</span>")  */
         // load/unload iframes when Week section is toggled
         document.querySelectorAll("#week-list-section summary").forEach(
             el => el.addEventListener("click", e => {

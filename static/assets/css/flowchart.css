@@ -1,0 +1,72 @@
+
+#flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    font-size: .6em;
+}
+.flow-item {
+    width: max-content;
+    position: relative;
+}
+.flow-item p {
+	border: solid 2px white;
+	border-radius: 20px;
+	padding: 8px 10px;
+	margin-block: 0;
+	transition: all .3s ease-in-out;
+}
+.flow-item::after, .flow-item.both-ways::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: solid 1.5em;
+    border-color: transparent;
+    border-top-color: white;
+    top: calc(100% + .4em);
+    left: calc(50% - 1.5em);
+    transform: scaleX(.5);
+}
+.flow-item:last-child::after {
+    content: none;
+}
+.flow-item.both-ways::after {
+    transform: scaleX(.5) translateX(-40%);
+}
+.flow-item.both-ways::before {
+    top: calc(100% - 1.1em);
+    border-bottom-color: white;
+    border-top-color: transparent;
+    transform: scaleX(.5) translateX(40%);
+}
+#flowchart.active .flow-item.both-ways::after {
+    animation: flash-top 4s ease-in-out infinite;
+}
+#flowchart.active .flow-item.both-ways::before {
+    animation: flash-bottom 4s ease-in-out 2s infinite;
+}
+.flow-item p:hover, #flowchart.active .flow-item.highlight p {
+    color: var(--r-link-color-hover);
+    background-color: white;
+    border-color: var(--r-link-color-hover);
+    scale: 1.1;
+}
+
+@keyframes flash-top {
+    0%, 50% {
+        border-top-color: white;
+    }
+    25% {
+        border-top-color: var(--r-link-color-hover);
+    }    
+}
+@keyframes flash-bottom {
+    0%, 50% {
+        border-bottom-color: white;
+    }
+    25% {
+        border-bottom-color: var(--r-link-color-hover);
+    }    
+}
