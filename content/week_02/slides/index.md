@@ -123,7 +123,7 @@ type: revealjs
 -   **Critically examine** the argument laid out in the Introduction
     -   What is being argued?
     -   Does it make sense?
--   Are the measures/methodology described in the Method section
+-   Are the measures/methodology described in the Methods section
     **appropriate for the goal**?
 -   Do the results **check out**
     -   For quantitative papers, expertise in statistics may be needed
