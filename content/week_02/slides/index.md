@@ -1,0 +1,222 @@
+---
+date: 2023-10-24
+execute:
+  echo: true
+title: Reading up
+toc-title: Table of contents
+type: revealjs
+---
+
+## Today
+
+::: incremental
+-   Discussion of your ideas (homework)
+-   How do you do literature search?
+-   My tips
+-   Reading a research paper
+-   Citing and referencing sources
+:::
+
+## Your research topic ideas
+
+::: incremental
+::: non-incremental
+**You**
+
+-   Tell us what topic you chose
+-   Say what interests you about/attracts you to this topic
+:::
+
+::: non-incremental
+**Others**
+
+-   Are you familiar with the topic?
+-   Do you have any thoughts?
+-   Do you know any research on that topic?
+:::
+:::
+
+## Literature search
+
+-   Why review literature?
+-   What types of literature do you survey?
+-   Where/how do you start?
+-   What platforms do you use?
+-   Do you know any literature search strategies?
+
+## Why review literature?
+
+::: incremental
+-   To familiarise yourself with the **current state of knowledge**
+-   To gain **expertise**
+-   To understand **what** kinds of research questions have been
+    explored and **how** they have been explored
+-   To **identify gaps** in knowledge
+-   To not reinvent the wheel and *"stand on the shoulders of giants"* -
+    science is a **collaborative effort**
+-   To **communicate** your expertise to your audience
+-   To not fail your thesis defence :smirk:
+:::
+
+## Types of literature
+
+-   Handbooks/Textbooks
+-   Monographs (AKA "books", including theses and dissertations)
+-   Edited volumes (anthology)
+-   Academic paper: research, review (systematic, meta-analysis), book
+    review
+-   Professional literature *e.g.,* Trade journals (Arch+, scape, urban
+    design, DETAIL, ...)
+-   Newspaper articles, blogs, tweets
+-   Grey literature (reports from Gov and NGOs, white papers, *etc.*)
+
+## Where to look
+
+::: incremental
+-   University library [catalogue and discovery
+    service](https://www.uni-weimar.de/en/university/structure/central-university-facilities/university-library/)
+    -   For more details about using university services both on and
+        off-campus (and much more!) see [this valuable
+        presentation](/docs/database_searching.pdf)
+-   Academic database services such as
+    [Scopus](https://www.scopus.com/search/)
+-   [Google Scholar](https://scholar.google.com) ([tips on how to use
+    it](https://paperpile.com/g/google-scholar-guide/))
+-   Machine-learning-powered tools, such as
+    [Elicit](https://elicit.com/)
+    -   Beware of ChatGPT - it makes stuff up!
+-   [Some
+    say](https://scholarlykitchen.sspnet.org/2016/02/25/sci-hub-how-does-it-work/)
+    that there's a way of accessing academic papers for free
+    -   No respect for the rights and financial interests of the
+        publishers
+    -   Doing that is bad and you should not do it and please don't and
+        oh dear why am I even telling you about it
+:::
+
+## Search strategy
+
+::: incremental
+-   Start with a review paper, encyclopedia entry, monograph, or even a
+    wikipedia article
+-   Check the sources cited and find the relevant-sounding ones
+-   Google Scholar helps you with forward (works that cited the one
+    you're looking at) and backward search (works cited by the one
+    you're looking at)
+-   Always perform a keyword search to find relevant sources
+-   Look for papers with a large number of citations
+    -   Not necessarily good or true
+    -   Definitely influential so good to know about them!
+-   **Be selective** about what you read; don't get lost in aimless deep
+    dives
+-   Useful [literature review
+    guide](https://libguides.tcd.ie/literature-reviews/getting-started)
+    and a [paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6148622/)
+    on search strategy
+:::
+
+## Reading papers
+
+::: incremental
+-   Check abstract to see if the paper is relevant
+    -   **Don't take it at face value**, always read the paper!
+-   **Critically examine** the argument laid out in the Introduction
+    -   What is being argued?
+    -   Does it make sense?
+-   Are the measures/methodology described in the Method section
+    **appropriate for the goal**?
+-   Do the results **check out**
+    -   For quantitative papers, expertise in statistics may be needed
+-   Are the conclusions in Discussion section **justified by the
+    results**?
+-   **Save, summarise, annotate!** Otherwise you'll forget
+:::
+
+## Citing sources
+
+-   Why do we cite sources?
+
+::: incremental
+-   To **support** arguments with **evidence**
+-   To **give credit** to other people's work
+-   To show you've done your research
+-   Using others' ideas without citation is **plagiarism** (big no-no!)
+:::
+
+::: incremental
+-   Cite every time you make an empirical claim that is not common
+    knowledge
+:::
+
+## Cite or not?
+
+::: incremental
+-   "There is an ongoing debate in the scientific community about the
+    definition of an urban area"
+    -   **cite**
+-   "There exists a large body of literature on the topic of the
+    relationship between the configuration of public spaces and social
+    pathology"
+    -   **cite multiple sources**
+-   "The derivative shows the sensitivity of change of a function's
+    output with respect to the input."
+    -   **don't cite**
+-   "The aforementioned study suffers from the following shortcomings"
+    -   **depends!**
+    -   Are you the one pointing them out or are you using someone
+        else's analysis?
+:::
+
+## Paraphrasing vs quoting
+
+::: incremental
+-   As a general rule, paraphrasing \> direct quotes
+-   Avoid direct quotes
+    -   Only if the phrasing in the cited work is important
+    -   If you're critiquing a particular argument and the wording is
+        relevant
+-   When paraphrasing, make sure you are **not misinterpreting** the
+    author
+:::
+
+## How to cite/reference
+
+::: incremental
+-   There are referencing style guides
+    -   [American Psychological
+        Association](https://apastyle.apa.org/style-grammar-guidelines/references/examples)
+        (seems like this is the preferred one at Bauhaus)
+    -   [The Chicago Manual of
+        Style](https://owl.purdue.edu/owl/research_and_citation/chicago_manual_17th_edition/cmos_formatting_and_style_guide/chicago_manual_of_style_17th_edition.html)
+    -   [Institute of Electrical and Electronics
+        Engineers](https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf)
+    -   [Modern Language
+        Association](https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_general_format.html)
+-   Whatever style you choose, **be consistent**
+-   **All** cited sources must be in the list of references
+-   **Only** cited sources must be in the list of references
+-   Use **referencing software**, such as
+    [Zotero](https://www.zotero.org/),
+    [Mendeley](https://www.mendeley.com/), or
+    [EndNote](https://endnote.com/?language=en)
+    -   Really though, you can't imagine how much it'll help you!
+:::
+
+## Homework
+
+::: tight
+1.  Get a referencing software of your choosing
+    -   Install also browser and word/OenOfice/LibreOffice plugins
+2.  Perform a broad search of the literature
+3.  Save all relevant papers/citations
+4.  Check out the sources linked in these slides for guidance and tips
+    on literature search and review
+5.  Start reading up on your topic
+    -   Take notes!
+6.  find access to and read the following review paper:
+
+::: reference
+Meerow, S., Newell, J. P., & Stults, M. (2016). Defining urban
+resilience: A review. *Landscape and urban planning, 147*, 38-49.
+:::
+:::
