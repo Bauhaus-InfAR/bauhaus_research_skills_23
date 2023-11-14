@@ -30,7 +30,7 @@
     {{/*  if (!caption) return
     if (caption.tagName !== "FIGCAPTION") return  */}}
     caption.classList.add("img-caption");
-    if (img.hasAttribute("data-source")) caption.innerHTML = caption.innerHTML + source
+    if (img.dataset.source) caption.innerHTML = caption.innerHTML + source
     const classesToAdd = ["img-caption-container"];
     if (img.classList.contains("rot")) caption.classList.add("rot");
     img.parentElement.classList.add(...classesToAdd);
