@@ -1,0 +1,347 @@
+---
+date: 2023-11-14
+execute:
+  echo: true
+title: Quality time
+toc-title: Table of contents
+type: revealjs
+---
+
+## Today
+
+::: incremental
+-   Approaches to research
+-   Quantitative and qualitative approaches
+-   Simulation
+-   Main focus: **Qualitative research**
+:::
+
+## Regarding your project
+
+-   You are *welcome* to pick a topic you wish to pursue in your
+    Master's thesis
+-   You are **not required** to do so!
+
+## Research approach
+
+::: incremental
+-   Not particularly well-defined term
+-   Informed by epistemological views and the problem at hand
+-   Informs study design and analysis
+-   A single problem can often be addressed using multiple approaches
+:::
+
+## Quantitative & qualitative
+
+ 
+
+![](./assets/qual_quant.svg){.svg width="700" height="500"}
+
+## 
+
+::: columns
+::: column
+[**Qualitative**]{.quasi-title}
+:::
+
+::: column
+[**Quantitative**]{.quasi-title}
+:::
+:::
+
+::: {.incremental .row-wise}
+::: columns
+::: column
+-   Focuses on the particular, contextualised
+:::
+
+::: column
+-   Focuses on the general, abstracted
+:::
+:::
+
+::: columns
+::: column
+-   Concerned with meaning
+:::
+
+::: column
+-   Concerned with quantifiable relationships
+:::
+:::
+
+::: columns
+::: column
+-   Data are text
+:::
+
+::: column
+-   Data are numeric
+:::
+:::
+
+::: columns
+::: column
+-   Understanding via detailed exploration
+:::
+
+::: column
+-   Understanding via hypothesis testing
+:::
+:::
+
+::: columns
+::: column
+-   Methods include observation, interview, focus groups, textual
+    sources, case studies
+:::
+
+::: column
+-   Methods include measurement, questionnaires, experiment
+:::
+:::
+
+::: columns
+::: column
+-   Smaller, carefully selected samples
+:::
+
+::: column
+-   Large samples or small samples with repeated measurement
+:::
+:::
+
+::: columns
+::: column
+-   Employs transcripts, attribute coding, notes/memos, conceptual maps
+:::
+
+::: column
+-   Employs statistical analysis
+:::
+:::
+:::
+
+## Computer simulation/modelling
+
+::: incremental
+-   Data are **generated** (vs collected) based on specified parameters
+-   Allows evaluating outcomes based on a given set of constraints
+-   Useful for comparing competing designs, assessing effects of a
+    change, *etc*.
+-   Traffic/pedestrian flow
+-   Parametrised street/parcel generation
+-   Urban space use
+-   Physical properties of urban design (irradiance, air flow...)
+:::
+
+## Computer simulation/modelling
+
+::: incremental
+-   Models (computer, statistical) are *abstractions* and are *always
+    based on theoretical assumptions*
+-   Results are only ever as good as the models are realistic
+
+ 
+
+> All models are wrong but some are useful [[George
+> Box](https://en.wikipedia.org/wiki/All_models_are_wrong)]{.author}
+:::
+
+## Qualitative research
+
+A strategy for systematic collection, organisation, and interpretation
+of textual information
+
+::: incremental
+-   Deliberate
+-   Considering broader context, strengths & limitations
+-   Informed by goals
+-   Relies on established, well-defined methodology
+-   "Textual" includes video, audio, transcripts, media...
+:::
+
+## Motivation
+
+::: incremental
+-   Social sciences study people and human\* **interaction, societies,
+    institutions**...
+-   These are all **imbued with meaning**
+-   The object of inquiry is not inanimate but is an **agent embedded in
+    context**
+:::
+
+## Disclaimer
+
+-   Extremely broad collection of methodological approaches
+-   Each has its own philosophical underpinnings (*e.g.*: phenomenology,
+    constructivism, symbolic interactionism...)
+-   It's not possible to cover any, let alone all of them exhaustively
+    here
+
+## Characteristics
+
+::: incremental
+-   Does **not** aim to test hypotheses
+-   Can be used to **generate** hypotheses
+-   Its goal is to understand a **specific phenomenon** in terms of
+    **meaning**
+-   Focuses on **depth** vs breadth of understanding
+-   Situated in **natural** setting (vs experiment/lab study)
+-   Uses **purposeful** vs random sampling
+-   Analyses data via **iterative interpretation**
+:::
+
+## Outcomes
+
+::: incremental
+-   Recurrent themes
+    -   Patterns of behaviour
+    -   Group interactions
+    -   Individual perceptions/experiences
+-   Hypotheses
+-   Questionnaires/survey instruments
+-   Taxonomies
+-   Conceptual models
+:::
+
+## Example
+
+Ladd, F. C. (1970). [Black youths view their environment: Neighborhood
+maps](https://journals.sagepub.com/doi/pdf/10.1177/001391657000200105?casa_token=tvZCSZRtu1cAAAAA:ZhdR53Km-cgMEPV379qcca7_k940NnNWcZusIWNm4JAJ2DIVhuAHN1jf51hK7jSyh0JqnZPpRbE).
+*Environment and behavior, 2*(1), 74-99.
+
+ 
+
+::: columns
+::: column
+![Map drawn by a child who went to a **segregated**
+school](./assets/Ladd_1970_01.png){.frame .rot source=""}
+:::
+
+::: column
+![Map drawn by a child who went to an **integrated**
+school](./assets/Ladd_1970_02.png){.frame .rot source=""}
+:::
+:::
+
+## Selected methodologies
+
+-   Verbal protocol analysis
+-   Enthnography
+-   Phenomenology
+-   Grounded theory
+
+## Verbal protocol analysis
+
+::: incremental
+-   AKA *"thinking aloud protocols"*
+-   Collecting data on cognitive processes
+-   Typical setup
+    -   Participants are given a task
+    -   Asked to verbalise their plan of solving the task
+    -   Recorded data are coded and analysed
+:::
+
+## Verbal protocol analysis
+
+  ------------------------------------------------------------------------
+  Segment   Content                         Plan level     Plan type
+  --------- ------------------------------- -------------- ---------------
+  1         OK... the first thing I would   Executive      Generate plan
+            do is to make a list of the                    
+            shops that are quite close to                  
+            each other                                     
+
+  2         and highlight the dance class   Metaplan       Satisfy time
+            remembering that it is at a                    constraints
+            specific time                                  
+
+  3         I would try to get to it first  Executive      Order messages
+            and get it over with...                        
+
+  4         probably, in reality I would    Executive      Evaluate plan
+            drop it....                                    Eliminate
+  ------------------------------------------------------------------------
+
+## Ethnography
+
+::: incremental
+-   Aims to capture social meaning and ordinary activities
+-   Researcher enters **natural setting**
+-   Involves spending an extended time in the setting, building rapport
+-   Interviews, observation, self-observation
+-   Focuses on
+    -   What is normal
+    -   What is available
+    -   What people say
+    -   What people do
+    -   How people work
+:::
+
+## Phenomenology
+
+::: incremental
+-   Aims to understand subjective experience from the participant's
+    point of view
+-   Emphasis on reflecting of researcher's own assumptions, experience,
+    preconceptions
+-   Involves **bracketing** off researcher's own phenomenology to
+    achieve an understanding of the participant's point of view and to
+    authentically describe it
+-   "What is it like to be you"
+:::
+
+## Grounded theory
+
+::: incremental
+-   Aim is to generate theory (conceptual framework)
+-   The theory is *grounded* in the data and doesn't originate from
+    assumptions
+-   Data collection and analysis occurs simultaneously
+-   Categorisations and codes develop from data, pre-existing
+    conceptualisations are not used
+-   Uses **theoretical sampling** - more data is collected based on the
+    identified needs for further theoretical development
+-   "Go where the data takes you"
+:::
+
+## Issues in qualitative research
+
+::: incremental
+-   Researcher is the instrument
+-   Need to reflect on one's **values, assumptions, biases, attitudes**
+    and how they might impact the study
+-   Elements of methodology (*e.g.*, codes) may change during the course
+    of research
+:::
+
+## Criteria of good qualitative research:
+
+::: incremental
+-   **Credibility**
+    -   Can the data support the claims?
+    -   Can be established through prolonged engagement, through
+        discussions with other researchers/participants, and through
+        critical self-reflection.
+-   **Transferability**
+    -   Can the findings be transferred to similar contexts?
+    -   Requires extensive, detailed, and careful descriptions of the
+        research context
+-   **Dependability**
+    -   Ensuring that researchers maintain a record of changes in the
+        research process or research instrument (including themselves)
+        over time
+-   **Confirmability**
+    -   Ensuring that the data used to support the conclusions are
+        verifiable
+:::
+
+## Be advised
+
+::: incremental
+-   Qualitative research is very laborious
+-   It's not "the easy way out" vs quantitative research
+-   If should be chosen on its own merits if it's the right choice for
+    the research question at hand, not because one is scared of maths
+:::

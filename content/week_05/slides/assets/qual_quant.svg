@@ -1,0 +1,11 @@
+<svg width="2485" height="1585" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" overflow="hidden">
+<g transform="translate(-934 -357)">
+<path d="M2177 495.5 2229.39 534.674C2404.73 679.387 2516.5 898.391 2516.5 1143.5 2516.5 1388.61 2404.73 1607.61 2229.39 1752.33L2177 1791.5 2124.61 1752.33C1949.27 1607.61 1837.5 1388.61 1837.5 1143.5 1837.5 898.391 1949.27 679.386 2124.61 534.673Z" stroke="#FFFFFF" stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M937.5 1149.5C937.5 713.747 1290.97 360.5 1727 360.5 2163.03 360.5 2516.5 713.747 2516.5 1149.5 2516.5 1585.25 2163.03 1938.5 1727 1938.5 1290.97 1938.5 937.5 1585.25 937.5 1149.5Z" stroke="#FFFFFF" stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/>
+<path d="M1837.5 1149.5C1837.5 713.747 2190.75 360.5 2626.5 360.5 3062.25 360.5 3415.5 713.747 3415.5 1149.5 3415.5 1585.25 3062.25 1938.5 2626.5 1938.5 2190.75 1938.5 1837.5 1585.25 1837.5 1149.5Z" stroke="#FFFFFF" stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/>
+<text fill="#FFFFFF" font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="128" transform="matrix(1 0 0 1 1100.72 1196)">Qualitative</text>
+<text fill="#FFFFFF" font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="128" transform="matrix(1 0 0 1 2620.69 1196)">Quantitative</text>
+<text fill="#1860ac" text-anchor="middle" font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="128" transform="matrix(1 0 0 1 2150 1100)">Mixed</text>
+<text fill="#1860ac" text-anchor="middle" font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="128" transform="matrix(1 0 0 1 2150 1300)">methods</text>
+</g>
+</svg>
