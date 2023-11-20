@@ -54,9 +54,10 @@ type: revealjs
 
 ## Research design
 
-:::{.incremental} - The purpose of quantitative research studies is to
-**test hypotheses** using *measurement*, *quantification*, and
-*mathematical or statistical modelling*.
+::: incremental
+-   The purpose of quantitative research studies is to **test
+    hypotheses** using *measurement*, *quantification*, and
+    *mathematical or statistical modelling*.
 
 -   Different kinds of research design have been developed to answer
     different research questions
@@ -66,7 +67,8 @@ type: revealjs
     -   The hypothesis to be tested
     -   Resources (time, money, facilities, personnel)
     -   Logistical considerations
-    -   Ethical considerations :::
+    -   Ethical considerations
+:::
 
 ## Design categories
 

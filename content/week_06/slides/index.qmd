@@ -63,7 +63,7 @@ includes:
   - Resources (time, money, facilities, personnel)
   - Logistical considerations
   - Ethical considerations
-  :::
+:::
 
 ## Design categories
 
