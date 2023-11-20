@@ -9,6 +9,7 @@ document.querySelectorAll(".reveal .cell img").forEach(img => {
     const imgContainer = img.closest(".cell-output-display")
     imgContainer.classList.add("img-container")    
     imgContainer.id = "Plot"
+    container.append(code)
     // imgContainer.append(image)
     // container.append(imgContainer)
     // container.append(code)
