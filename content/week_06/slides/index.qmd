@@ -286,12 +286,6 @@ _An experimental task consists of trials, where a stimulus is presented and a re
 
 ## 
 
-:::{.centered .large .text-center}
-Any questions?
-:::
-
-## 
-
 \ 
 
 \ 
@@ -310,6 +304,12 @@ Any questions?
 
 :::{.incremental}
 They can't provide evidence of causality of the same strength as experiments
+:::
+
+## 
+
+:::{.centered .large .text-center}
+Any questions?
 :::
 
 
