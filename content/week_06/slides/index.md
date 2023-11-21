@@ -96,7 +96,7 @@ type: revealjs
 -   They are looking for *native English speakers between 18 and 60
     years of age, with normal or corrected-to-normal vision, and without
     dyslexia*
--   You respond and tell you to come to the lab tomorrow at 2pm but to
+-   You respond and are told to come to the lab tomorrow at 2pm but to
     get a good rest tonight and to have lunch around noon
 -   You get to the lab, they lead you to a dark room and sit you down in
     front of a computer screen.
@@ -354,12 +354,6 @@ quantitative research with human participants!**
 
 ## 
 
-::: {.centered .large .text-center}
-Any questions?
-:::
-
-## 
-
  
 
  
@@ -380,6 +374,12 @@ experiments!**
 ::: incremental
 They can't provide evidence of causality of the same strength as
 experiments
+:::
+
+## 
+
+::: {.centered .large .text-center}
+Any questions?
 :::
 
 ## Observational design
@@ -619,3 +619,12 @@ This would not be ethical
 
 -   Used in topics of **ageing and development** but also others
 :::
+
+## Homework
+
+-   Consider quantitative approach to your research question
+-   Work on specifying your research question
+    -   Come up with two different possible answers
+    -   What are you interested **in particular**
+    -   What are you **not** interested in
+-   What methodology could you feasibly use?
