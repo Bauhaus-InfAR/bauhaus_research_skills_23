@@ -35,10 +35,12 @@
                 {{ if in .Type "week" }}
                 <details><summary><h2><span class="week-number">Week {{ replaceRE ".*?0?(\\d+).*" "$1" .File.Dir }}</span>{{ .Title }}</h2></summary>
                 <p>{{ .Content }}</p>
-                <div class="slide-iframe-container">
-                    <iframe class="slides" src="about:blank" data-source="{{ .Permalink }}/slides"></iframe>
-                    <a href="{{ .Permalink }}/slides" target="_blank">Open in a new tab</a>
-                </div>
+                    {{ if urls.JoinPath .Type "slides" "index.md" | fileExists }}
+                    <div class="slide-iframe-container">
+                        <iframe class="slides" src="about:blank" data-source="{{ .Permalink }}/slides"></iframe>
+                        <a href="{{ .Permalink }}/slides" target="_blank">Open in a new tab</a>
+                    </div>
+                    {{ end }}
                 </details>
                 {{ end }}                
                 {{ end }}
