@@ -168,7 +168,7 @@ Ideas?
 - How do you _feel_? (emotional component)
   - Valence
   - Strength
-- What do you _do_? (conntive component)
+- What do you _do_? (conative component)
 :::
 
 ## Deriving items/questions
