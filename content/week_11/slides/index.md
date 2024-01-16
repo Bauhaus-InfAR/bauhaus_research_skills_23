@@ -1,10 +1,5 @@
 ---
 date: 2024-01-16
-execute:
-  echo: true
-  fig-dpi: 600
-includes:
-  css: ./assets/css/style.css
 title: Just asking questions
 toc-title: Table of contents
 type: revealjs
@@ -259,5 +254,5 @@ Loading...
         using methods, *e.g.,* exploratory/confirmatory factor analysis
     -   How to score a questionnaire is a non-trivial question (but sum
         scores are often used :unamused:)
--   Qestionnaires are **a lot of work**!
+-   Questionnaires are **a lot of work**!
 :::
