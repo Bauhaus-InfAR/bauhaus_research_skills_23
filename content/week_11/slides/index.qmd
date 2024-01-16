@@ -247,5 +247,5 @@ Ideas?
   - The structure of the measured construct can be explored/tested using methods, _e.g.,_ exploratory/confirmatory factor analysis
   - How to score a questionnaire is a non-trivial question (but sum scores are often used :unamused:)
 
-- Qestionnaires are **a lot of work**!
+- Questionnaires are **a lot of work**!
 :::
